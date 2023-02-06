@@ -4,6 +4,8 @@ How javascript originated
 How the internet originated   
 How the internet works   
 
+!["internet working image"](https://mocomi.com/wp-content/uploads/2016/10/MOC_GIFO_INTERNET.gif)
+
 In fact new things I actually learned:   
 - how to move a directory ( I forgot the git part of git mv)
 - how to create a profile page for my github
@@ -15,3 +17,4 @@ In fact new things I actually learned:
 - more about why people don't like js so much - I have found it quite liberating after VBA and Python
 - more about colours and predicting what hexes will render as
 - how to make a profile page look really cool
+
