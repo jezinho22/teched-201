@@ -9,6 +9,7 @@ Tasks
 
 ## Version 1
 
+The HTML
 ```
 <!DOCTYPE html>
 <html lang="en">
@@ -50,7 +51,7 @@ Tasks
   </body>
 </html>
 ```
-
+The JS
 ```
 function letMeKnow() {
   alert("This is an alert. So now you know");
@@ -62,4 +63,14 @@ function debugMe() {
   console.log("No bugs so far! Plus this is what you asked: ", asked);
 }
 ```
-
+The CSS
+```
+body {
+  background-color: blue;
+  color: antiquewhite;
+}
+h1 {
+  background-color: aqua;
+  color: black;
+}
+```
