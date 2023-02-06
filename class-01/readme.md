@@ -1,8 +1,8 @@
 # Today I learned
 
-How javascript originated
-How the internet originated
-How the internet works
+How javascript originated   
+How the internet originated   
+How the internet works   
 
 In fact new things I actually learned:   
 - how to move a directory ( I forgot the git part of git mv)
