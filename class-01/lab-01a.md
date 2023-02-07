@@ -74,3 +74,68 @@ h1 {
   color: black;
 }
 ```
+
+## Lab01-b
+
+1️⃣  | create four prompts   
+2️⃣  | each prompt should ask your name, age, country and fav color respectively    
+3️⃣  | Create a LIST in your html    
+4️⃣  | This list should contain four list items with name, age, country and fav color   
+5️⃣  | the values you enter in your prompt should be rendered in the frontend and the text color should be the fav color you entered   
+
+```<!DOCTYPE html>
+
+<head>
+
+    <title>Document</title>
+    <style>
+        body{
+            background-color:wheat;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            color:goldenrod;
+            width: 50%;
+        }
+        #list1 {
+            background-color:antiquewhite;
+            color:goldenrod;
+            border: 2px black;
+            border-radius: 3px;   
+        }
+        button {
+            height: 40px;
+            width: 150px;
+            margin: 40px;
+        }
+    </style>
+
+</head>
+
+<body id="bod">
+    <HEADER>    
+        <H1 onclick="onClickHandler()">This is my list</H1>
+    </HEADER>
+    <ul id = "list1">
+       <li>Item 1</li>
+       <li>Item 2</li>
+       <li>Item 3</li>
+       <li>Item 4</li>
+    </ul>
+    <button onclick="clicked()">Click here</button>
+    <script>
+        function clicked(){
+        let myName=prompt("What is your name?")
+        let myAge=prompt("What is your age?")
+        let myCountry=prompt("What country would you say you are from?")
+        let myColour= prompt("What is your favourite colour?")
+        let listItems = document.getElementsByTagName("li")
+        listItems[0].innerText = myName
+        listItems[1].innerText = myAge
+        listItems[2].innerText = myCountry
+        listItems[3].innerText = `And for your amusement, the font colour has been changed to ${myColour}!`
+        document.getElementById('list1').style.color = myColour
+        }
+    </script>
+
+</body>
+</html>
+```
