@@ -1,39 +1,44 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css" />
-    <script src="myscript.js"></script>
+
+<head>
+
     <title>Document</title>
-  </head>
-  <body>
-    <header>
-      <h1>A new web page</h1>
-      <p>
-        <script></script>
-      </p>
-      <p>
-        <script>
-          asked = prompt("Ask me anything. Go on. Anything");
-          console.log("No bugs so far!");
-          alert("This is an alert. So now you know");
-          document.print("What is this then?");
-        </script>
-      </p>
-      <nav>
-        <ul>
-          <li>Menu 1</li>
-          <li>Menu 2</li>
-        </ul>
-      </nav>
-    </header>
-    <main>
-      <p>Some text for the middle of the page</p>
-    </main>
-    <footer>
-      <p>&copy Jezinho</p>
-    </footer>
-  </body>
+    <style>
+        body{
+            background-color: deepskyblue;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+        #list1 {
+            background-color: olivedrab;
+            color:antiquewhite;
+            border: 1px black;
+            border-radius: 3px;
+        }
+    </style>
+</head>
+
+<body id="bod">
+    <HEADER>    
+        <H1 onclick="onClickHandler()">This is my list</H1>
+    </HEADER>
+    <ul id = "list1">
+       <li>Item 1</li>
+       <li>Item 2</li>
+       <li>Item 3</li>
+    </ul>
+    <button onclick="clicked()">Click here</button>
+    <script>
+        function onClickHandler(){
+            document.getElementById('list1').style.backgroundColor = "dark blue";
+        }
+        function clicked(){
+            console.log("It's calling me")
+            let hue = prompt("What colour do you want the page to be?");
+            let bgHue = prompt( "Which bg color do you want?");
+            document.getElementById("bod").style.backgroundColor = bgHue;
+            document.getElementById("bod").style.color = hue;
+        }
+    </script>
+    <p>Any old thing</p>
+</body>
 </html>
