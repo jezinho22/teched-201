@@ -5,16 +5,24 @@
     <title>Document</title>
     <style>
         body{
-            background-color: deepskyblue;
+            background-color:wheat;
             font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            color:goldenrod;
+            width: 50%;
         }
         #list1 {
-            background-color: olivedrab;
-            color:antiquewhite;
-            border: 1px black;
-            border-radius: 3px;
+            background-color:antiquewhite;
+            color:goldenrod;
+            border: 2px black;
+            border-radius: 3px;   
+        }
+        button {
+            height: 40px;
+            width: 150px;
+            margin: 40px;
         }
     </style>
+
 </head>
 
 <body id="bod">
@@ -25,20 +33,23 @@
        <li>Item 1</li>
        <li>Item 2</li>
        <li>Item 3</li>
+       <li>Item 4</li>
     </ul>
     <button onclick="clicked()">Click here</button>
     <script>
-        function onClickHandler(){
-            document.getElementById('list1').style.backgroundColor = "dark blue";
-        }
         function clicked(){
-            console.log("It's calling me")
-            let hue = prompt("What colour do you want the page to be?");
-            let bgHue = prompt( "Which bg color do you want?");
-            document.getElementById("bod").style.backgroundColor = bgHue;
-            document.getElementById("bod").style.color = hue;
+        let myName=prompt("What is your name?")
+        let myAge=prompt("What is your age?")
+        let myCountry=prompt("What country would you say you are from?")
+        let myColour= prompt("What is your favourite colour?")
+        let listItems = document.getElementsByTagName("li")
+        listItems[0].innerText = myName
+        listItems[1].innerText = myAge
+        listItems[2].innerText = myCountry
+        listItems[3].innerText = `And for your amusement, the font colour has been changed to ${myColour}!`
+        document.getElementById('list1').style.color = myColour
         }
     </script>
-    <p>Any old thing</p>
+
 </body>
 </html>
