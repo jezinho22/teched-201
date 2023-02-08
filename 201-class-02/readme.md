@@ -1,5 +1,13 @@
 # Class 02 reading notes   
 
+### TIL
+- Huh! You can put little % operators on CSS and adjust them so that elements are x% the size of each other
+- Which would make it easy to to create a loading bar, or percent correct bar - which is just what I need for my cricket picking game
+- I also learned how to make multiple folders and files in terminal eg `mkdir 201-class-{01..15}` and `touch ~/projects/teched-201/201-class-{01..15}/readme.md`
+
+### IWTFOMA
+- How to use selectors dynamically for CSS
+- I've forgotten how to do numbered list in md - I thought it was just with numbers ...
 
 ## Class-02 Quiz
   
