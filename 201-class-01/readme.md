@@ -36,13 +36,3 @@ Other important ones:
 mv = move a file
 rm <filename> = remove a file permanently. Warning: there is no recovery!
 cp <source> <destination> = copy a file
-
-## Reading for 201.2
-
-### TIL
-- Huh! You can put little % operators on CSS and adjust them so that elements are x% the size of each other
-- Which would make it easy to to create a loading bar, or percent correct bar - which is just what I need for my cricket picking game
-
-### IWTFOMA
-- How to use selectors dynamically for CSS
-- I've forgotten how to do numbered list in md - I thought it was just with numbers ...
