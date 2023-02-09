@@ -58,7 +58,7 @@ What is an array? I knew it was a grid of data items. I knew that I usually use 
 6. Terminal: `git add . `
 7. Terminal: `git commit -m "what I changed"`
 8. Terminal: `git push`
-9. Browser: Go to github and get **permalink** for the lab.md (three dots top right of the file when you view it in github), paste it into Canvas
+9. Browser: Go to github and get **permalink** for the lab.md (three dots visible top right of the file when you view it in github), paste it into Canvas
 
 ### Reading:
 

@@ -4,6 +4,14 @@
 
 [Link to Lab 03](201-lab-03.md)
 
+## TIL
+
+- the origins of the term 'deugging' in old solid state computers
+
+## IWTFO
+
+- how to use flex to lay out elements
+
 ## Reading tasks
 
 ### Ordered and Unordered lists.
@@ -21,7 +29,7 @@ List and describe the four parts of an HTML elements box as referred to by the b
 
 ### Learn JS: Arrays. Operators and Expressions. Conditionals. Loops.
 
-What data types can you store inside of an Array?
+What data types can you store inside of an Array? Any and all, including arrays!
 Is the people array a valid JavaScript array? If so, how can I access the values stored? If not, why?
 
 ```
