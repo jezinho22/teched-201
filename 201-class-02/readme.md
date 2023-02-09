@@ -33,6 +33,28 @@ What is an array? I knew it was a grid of data items. I knew that I usually use 
 
 ## my git workflow
 
+### Starting a session:
+
 1. Open repo in terminal
-2. code . to get to vs code
-3.
+2. `code .` to get to vs code
+3. Open readme.md
+4. Create a lab html
+5. Right click lab html in explore, and choose Open with Live Server - to get a browser window to render code
+
+### Reading:
+
+1. Open repo in terminal - cd into the directory
+2. Maybe a cheeky `git status` and `git pull` in case you did anything in github since last session
+3. `code .` to get to vs code
+4. Open readme.md
+5. Open a preview tab - right click on readme tab (or on file in explorer) - choose _Open preview_
+6. Add comments as reading / maybe copy and paste some prompts from Canvas
+7. Preview readme.md as you go - use the preview tab
+
+### Finishing:
+
+1. Copy link (path) to file and paste into readme - right click on the lab in explorer or on the tab, and choose _Copy relative path_
+2. Paste same link into the _Canvas_ comment for that lab
+3. In terminal: `git add . `
+4. In terminal: `git commit -m "what I changed"`
+5. In terminal: `git push`
