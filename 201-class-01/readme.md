@@ -2,7 +2,7 @@
 
 ## Lab links
 
-[Link to Lab 01](201-class-01/lab-01a.md)  
+[Link to Lab 01](lab-01a.md)  
 [Link to Lab 01 html](https://github.com/jezinho22/teched-201/blob/57f39ddb7f16cd80a117e249b31c6bc02065b33c/201-class-01/new-test-page/index.html)
 
 ## Today I learned
