@@ -3,7 +3,7 @@
 ## Lab links
 
 [Link to Lab 01](lab-01a.md)  
-[Link to Lab 01 html](teched-201/201-class-01/new-test-page/index.html)
+[Link to Lab 01 html](201-class-01/new-test-page/index.html)
 
 ## Today I learned
 
