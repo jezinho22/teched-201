@@ -2,18 +2,21 @@
 
 ## Lab links
 
+[Link to lab-02](lab-02-a/lab-02-a.html)
+
 ### TIL
 
 - Huh! You can put little % operators on CSS and adjust them so that elements are x% the size of each other
 - Which would make it easy to to create a loading bar, or percent correct bar - which is just what I need for my cricket picking game
 - I also learned how to make multiple folders and files in terminal eg `mkdir 201-class-{01..15}` and `touch ~/projects/teched-201/201-class-{01..15}/readme.md`
+- I have had to find out how to move, remove, rename files and folders in terminal; also how to remove a cloned repo - there's a hidden file called .git that has to be forcibly removed; -r allows you to do stuff to a load of folders and everything in them
 
 ### IWTFOMA
 
 - How to use selectors dynamically for CSS
 - I've forgotten how to do numbered list in md - I thought it was just with numbers ...
 
-## Class-02 Quiz
+<p style="color:orange; font: 30px">Class-02 Quiz</p>
 
 Why is it important to use semantic elements in our HTML? _So it can be understood by colleagues; so it can be easily constructed by us (in standardised ways)_  
 How many levels of headings are there in HTML? _6_  
@@ -37,26 +40,35 @@ What is an array? I knew it was a grid of data items. I knew that I usually use 
 
 ### Starting a session:
 
-1. Open repo in terminal
-2. `code .` to get to vs code
-3. Open `readme.md`
-4. Create a lab html
-5. Open a Live Server for the lab html - so you can view the rendered code when you want to - right click on lab html in explore or on tab, and choose *Open with Live Server*
+1. Terminal: Open repo in terminal - `cd` into the directory
+2. Terminal: Maybe a cheeky `git status` and `git pull` in case you did anything in github since last session
+3. Terminal: `code .` to get to vs code
+4. VS Code: Open `readme.md`
+5. VS Code: Create a lab html to work in today
+6. VS Code: Open a Live Server for the lab html - so you can view the rendered code when you want to - right click on lab html in explore or on tab, and choose _Open with Live Server_
+7. Browser: check Live Server has opened a browser window
+
+### Finishing a session:
+
+1. Browser: Copy prompts (from discord or canvas)
+2. VS Code: Paste promps to lab.md
+3. VS Code: Copy code and paste to lab.md
+4. VS Code: Add link for lab.html to lab.md
+5. VS Code: Add link for lab.md to readme.md - relative path would be just the filename
+6. Terminal: `git add . `
+7. Terminal: `git commit -m "what I changed"`
+8. Terminal: `git push`
+9. Browser: Go to github and get **permalink** for the lab.md (three dots top right of the file when you view it in github), paste it into Canvas
 
 ### Reading:
 
-1. Open repo in terminal - cd into the directory
-2. Maybe a cheeky `git status` and `git pull` in case you did anything in github since last session
-3. `code .` to get to vs code
-4. Open `readme.md`
-5. Open a preview tab - right click on readme tab (or on file in explorer) - choose *Open preview*
-6. Add comments as reading / maybe copy and paste some prompts from Canvas
-7. Preview readme.md as you go - use the preview tab
-
-### Finishing:
-
-1. Copy link (path) to file and paste into readme - right click on the lab in explorer or on the tab, and choose _Copy relative path_
-2. Paste same link into the _Canvas_ comment for that lab
-3. In terminal: `git add . `
-4. In terminal: `git commit -m "what I changed"`
-5. In terminal: `git push`
+1. Terminal: Open repo in terminal - cd into the directory
+2. Terminal: Maybe a cheeky `git status` and `git pull` in case you did anything in github since last session
+3. Terminal: `code .` to get to vs code
+4. VS Code: Open `readme.md` for the lesson
+5. VS Code: Open a preview tab - right click on readme tab (or on file in explorer) - choose _Open preview_
+6. VS Code: Add comments as reading / maybe copy and paste some prompts from Canvas
+7. VS Code: Preview readme.md as you go - use the preview tab
+8. Terminal: `git add . `
+9. Terminal: `git commit -m "what I changed"`
+10. Terminal: `git push`
