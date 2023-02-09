@@ -1,35 +1,45 @@
-# Today I learned
+# 201-class-01
 
-How javascript originated   
-How the internet originated   
-How the internet works   
+## Lab links
+
+### Lab prompts
+
+[Link to Lab 01](teched-201/201-class-01/lab-01a.md)  
+[Link to Lab 01 html](https://github.com/jezinho22/teched-201/blob/57f39ddb7f16cd80a117e249b31c6bc02065b33c/201-class-01/new-test-page/index.html)
+
+## Today I learned
+
+How javascript originated  
+How the internet originated  
+How the internet works
 
 !["internet working image"](https://mocomi.com/wp-content/uploads/2016/10/MOC_GIFO_INTERNET.gif)
 
-In fact new things I actually learned:   
+In fact new things I actually learned:
+
 - how to move a directory ( I forgot the git part of git mv)
 - how to create a profile page for my github
 - how to make a folder in a repo (foldername / anyfile)
 - the difference between events, event listeners and event handlers (eg mouse click, onclick, and function buttonClicked())
 
-## IWTFO   
+## IWTFO
 
 - more about why people don't like js so much - I have found it quite liberating after VBA and Python
 - more about colours and predicting what hexes will render as
 - how to make a profile page look really cool
-  
+
 List of commands for use in terminal. PLEASE PASTE THIS IN YOUR README. WE WILL HAVE A LOOK ABOUT THIS TODAY.
 
-1️⃣  |  pwd = print working directory   
-2️⃣  | tree = shows the file tree of your directory   
-3️⃣  | ls = list all the files and folders located in your current directory   
-4️⃣  | ls -a = list all the files and folders located in your current directory including hidden files in short form   
-5️⃣  | ls -la = list all the files and folders located in your current directory including hidden files in a more detailed form   
-6️⃣  | cd = change directory   
-7️⃣  | mkdir = make directory   
-8️⃣  | touch = create a new file   
-9️⃣  | code <filename> = open up this file in VSCode   
-🔟  | code . = open the current directory in VSCode   
+1️⃣ | pwd = print working directory  
+2️⃣ | tree = shows the file tree of your directory  
+3️⃣ | ls = list all the files and folders located in your current directory  
+4️⃣ | ls -a = list all the files and folders located in your current directory including hidden files in short form  
+5️⃣ | ls -la = list all the files and folders located in your current directory including hidden files in a more detailed form  
+6️⃣ | cd = change directory  
+7️⃣ | mkdir = make directory  
+8️⃣ | touch = create a new file  
+9️⃣ | code <filename> = open up this file in VSCode  
+🔟 | code . = open the current directory in VSCode
 
 Other important ones:
 
