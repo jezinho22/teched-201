@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h1>At the zoo</h1>
+    <button onclick="listClick()">Who is in the zoo?</button>
+    <button onclick="addClick()">Who do you want to add?</button>
+    <p id="animals"></p>
+
+    <script>
+      var animals = ["polar bear", "penguin", "seal", "boa constrictor"];
+
+      function listClick() {
+        console.log("listClick working");
+        document.getElementById("animals").innerText = animals;
+      }
+      function addClick() {
+        console.log("addClick working");
+        newAnimal = prompt("Add animal here");
+        if (newAnimal == "tiger" || newAnimal == "Tiger") {
+          document.getElementById("animals").innerText = `Hey, welcome ${newAnimal}! Look, now we are ${animals}`;
+        } else {
+          document.getElementById("animals").innerText = `Oh, hello ${newAnimal}, where's Tiger?`;
+        }
+        animals.push(newAnimal);
+        // document.getElementById('animals').innerText = animals
+      }
+    </script>
+  </body>
+</html>

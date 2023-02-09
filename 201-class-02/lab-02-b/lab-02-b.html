@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+
+<head>
+
+    <title>Document</title>
+    <style>
+        body{
+            background-color:wheat;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            color:goldenrod;
+            width: 50%;
+        }
+        #list1 {
+            background-color:antiquewhite;
+            color:goldenrod;
+            border: 2px black;
+            border-radius: 3px;   
+        }
+        button {
+            height: 40px;
+            width: 150px;
+            margin: 40px;
+        }
+    </style>
+
+</head>
+
+<body id="bod">
+    <HEADER>    
+        <H1>This is my list</H1>
+    </HEADER>
+    <ul id = "list1">
+       <li>Item 1</li>
+       <li>Item 2</li>
+       <li>Item 3</li>
+       <li>Item 4</li>
+    </ul>
+    <ul id = "list2">
+        <li>Extra Item 1</li>
+        <li>Extra Item 2</li>
+        <li>Extra Item 3</li>
+        <li>Extra Item 4</li>
+     </ul>
+    <button onclick="getInfo()">Click here</button>
+    <button onclick="getExtraInfo()">Add extra info</button>
+    <script>
+        function getInfo(){
+            // debug
+            console.log("Button working")
+
+            // prompt user for info
+            var myName=prompt("What is your name?")
+            var myAge=prompt("What is your age?")
+            var myCountry=prompt("What country would you say you are from?")
+            var myColour= prompt("What is your favourite colour?")
+
+            // get list elements from DOM - as a list/array
+            var listItems = document.getElementById("list1").getElementsByTagName("li")
+
+            // insert messages into lit elements
+            listItems[0].innerText = "Welcome: ", myName
+            listItems[1].innerText = `I see you are ${myAge} years old`
+            listItems[2].innerText = `And that you come from ${myCountry}`
+            listItems[3].innerText = `For your amusement, the font colour has been changed to ${myColour}, your favourite colour!`
+
+            // change font colour to match user's response
+            document.getElementById('list1').style.color = myColour
+
+        }   
+        // gets 4 more pieces of info
+        function getExtraInfo(){
+            // debug
+            console.log("Button working")
+        
+            // prompt user for info
+            var myEducation = prompt("What is your highest education qualification?")
+            var myLanguage = prompt("What is your LEAST favourite programming language?")
+            var myJob = prompt("What is your dream job?")
+            var myHoliday = prompt("What is your dream holiday destination?")
+        
+            // check user info for specific input on language & create message
+            if (myLanguage == 'Javascript' || myLanguage == 'JS' || myLanguage == 'js' || myLanguage == 'javascript'){
+                var languageMessage = `Is that you, V? Come on, everyone loves ${myLanguage}`
+            } else {
+                var languageMessage = `Oh yeah, everyone hates ${myLanguage}!`
+            }
+
+            // get list elements from DOM - as a list/array
+            var listItems = document.getElementById("list2").getElementsByTagName("li")
+
+            // insert messages into lit elements
+            listItems[0].innerText = `Well done on achieving ${myEducation}`
+            listItems[1].innerText = languageMessage
+            listItems[2].innerText = `Keep working hard, and I am sure that one day you can be a ${myJob}`
+            listItems[3].innerText = `Hey, that's my favourite too. Come on let's go to ${myHoliday}`
+        }
+
+    </script>
+
+</body>
+</html>
