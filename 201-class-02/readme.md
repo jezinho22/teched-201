@@ -1,5 +1,7 @@
 # Class 02 reading notes
 
+## Lab links
+
 ### TIL
 
 - Huh! You can put little % operators on CSS and adjust them so that elements are x% the size of each other
