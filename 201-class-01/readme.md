@@ -44,3 +44,34 @@ Other important ones:
 mv = move a file
 rm <filename> = remove a file permanently. Warning: there is no recovery!
 cp <source> <destination> = copy a file
+
+Compose a short poem describing how HTTP sends data between computers.
+Describe how HTML, CSS, and JS files are “parsed” in the browser.
+How can you find images to add to a Website?
+How do you create a String vs a Number in JavaScript?
+What is a Variable and why are they important in JavaScript?
+
+## Introduction to HTML
+
+Read the beginning of Getting Started with HTML. Start from the beginning and read through section “Anatomy of an HTML document”.
+
+### HTML Document Structure: Metadata in HTML.
+
+What is an HTML attribute? _something that goes inside the tag to give extra info about the element or modify it_
+Describe the Anatomy of an HTMl element _open tag: open angle bracket, tag name, attributes, close angle bracket; content; close tag: open angle bracket, close tag, close angle bracket_
+What is the Difference between <article> and <section> element tags? _nothing in terms of action, but articles would go inside a section_
+What Elements does a “typical” website include? html, head, body, header, nav, section, article, footer
+How does metadata influence Search Engine Optimization? they look at the head; the title can be easily picked up; info in the meta; often h1 as well
+How is the <meta> HTML tag used when specifying metadata? info for search engines goes in it as attriubutes eg name, content
+
+### How to start to design a Website.
+
+What is the first step to designing a Website? Get info about what is wanted
+What is the most important question to answer when designing a Website?
+
+Why should you use an `<h1>` element over a `<span>` element to display a top level heading? h1 can be picked up by search engines, and is semantic for the coder
+What are the benefits of using semantic tags in our HTML? easy reading
+What is JavaScript? code behind the html to make things happen
+
+Describe 2 things that require JavaScript in the Browser? buttons, inputs
+How can you add JavaScript to an HTML document? in script tags
