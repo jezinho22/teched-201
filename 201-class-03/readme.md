@@ -29,14 +29,22 @@ List and describe the four parts of an HTML elements box as referred to by the b
 
 ### Learn JS: Arrays. Operators and Expressions. Conditionals. Loops.
 
-What data types can you store inside of an Array? Any and all, including arrays!
-Is the people array a valid JavaScript array? If so, how can I access the values stored? If not, why?
+What data types can you store inside of an Array? _Any and all, including arrays!_
 
 ```
  const people = [['pete', 32, 'librarian', null], ['Smith', 40, 'accountant', 'fishing:hiking:rock_climbing'], ['bill', null, 'artist', null]];
 ```
 
-List five shorthand operators for assignment in javascript and describe what they do.
+Is the people array a valid JavaScript array? If so, how can I access the values stored? If not, why?
+
+```
+ console.log(people.length) 3
+ console.log(people[0][3])  null
+ console.log(people[0][0])  'pete'
+```
+
+List five shorthand operators for assignment in javascript and describe what they do.  
+`x += y` `x -= y` `x *= y` `x /= y`  
 Read the code below and evaluate the last expression and explain what the result would be and why.
 
 ```
@@ -48,5 +56,106 @@ Read the code below and evaluate the last expression and explain what the result
  (a + c) + b;
 ```
 
+_false evaluates to 0 (true is 1); so 10 + false = 10; 10 is seen as a string when string methods are attempted on it (and adding to a string is a string method), so 10 + dog = 10dog_  
 Describe a real world example of when a conditional statement should be used in a JavaScript program.
 Give an example of when a Loop is useful in JavaScript.
+
+### html and css work today
+
+```
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Plain J Pictures</title>
+
+  <style>
+    body {
+      background-color: darkblue;
+    }
+
+    #header {
+      border: 5px solid white;
+      background-color: lightblue;
+      padding: 20px;
+    }
+
+    #main {
+      border: 5px solid white;
+      background-color: turquoise;
+      text-align: center;
+    }
+
+    img {
+      width: 200px;
+      height: 150px;
+    }
+
+    #features-section {
+
+      text-align: center;
+      width: 25%;
+      float: right;
+      margin-top: -70px
+    }
+
+    input {
+      border: none;
+      padding: 12px;
+      color: green;
+      font-family: salmon;
+      font-weight: bolder;
+      border-radius: 16px;
+      box-shadow: 2px 2px grey;
+
+    }
+
+    li {
+      display: inline-block;
+      background-color: blueviolet;
+      margin: 10px;
+      padding: 10px 15px;
+      border-radius: 16px;
+      box-shadow: 2px 2px grey;
+    }
+  </style>
+</head>
+
+<body>
+
+
+  <div id="header">
+    <h1>HEADER</h1>
+    <ul>
+      <li>Home</li>
+      <li>Favorites</li>
+      <li>Contact</li>
+    </ul>
+
+    <div id="features-section">
+      <input type="text" placeholder="Search here" />
+    </div>
+
+
+  </div>
+
+
+  <div id="main">
+    <h1>MAIN</h1>
+
+    <img src="cromer-pier.jpg" />
+    <img src="cromer-pier.jpg" />
+    <img src="cromer-pier.jpg" />
+    <img src="cromer-pier.jpg" />
+    <img src="cromer-pier.jpg" />
+    <img src="cromer-pier.jpg" />
+    <img src="cromer-pier.jpg" />
+    <img src="cromer-pier.jpg" />
+  </div>
+
+
+</body>
+
+
+</html>
+```
