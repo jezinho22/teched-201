@@ -1,0 +1,57 @@
+/* CSS HEX
+--rich-black: #03071eff;
+--chocolate-cosmos: #370617ff;
+--rosewood: #6a040fff;
+--penn-red: #9d0208ff;
+--engineering-orange: #d00000ff;
+--sinopia: #dc2f02ff;
+--persimmon: #e85d04ff;
+--princeton-orange: #f48c06ff;
+--orange-web: #faa307ff;
+--selective-yellow: #ffba08ff; */
+
+body {
+  background-color: #6a040fff;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  color: goldenrod;
+  width: 100%;
+}
+h1 {
+  text-align: center;
+  font-size: 60px;
+  color: #ffba08ff;
+}
+ul {
+  background-color: antiquewhite;
+  color: goldenrod;
+  border: 2px solid black;
+  border-radius: 10px;
+  padding: 10px;
+  margin: 5px;
+}
+#buttondiv {
+  text-align: justify;
+}
+button {
+  width: 200px;
+  padding: 10px;
+  margin: 0 150px;
+  border-radius: 16px;
+  font-size: 20px;
+  color: antiquewhite;
+  background-color: goldenrod;
+}
+li {
+  height: 30px;
+  font-size: 18px;
+  list-style: none;
+  margin: 5px 10px;
+  padding: 10px 0;
+}
+.column {
+  float: left;
+  width: 32%;
+}
+.aboutmelist {
+  margin: 0;
+}

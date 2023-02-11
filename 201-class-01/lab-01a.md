@@ -2,15 +2,16 @@
 
 Tasks
 
-1️⃣  | Create a basic html code
-2️⃣  | Add basic css styling
-3️⃣  | Add a Js script to it
-4️⃣  |  JS files should contain console.log, prompt and an alert
+1️⃣ | Create a basic html code
+2️⃣ | Add basic css styling
+3️⃣ | Add a Js script to it
+4️⃣ | JS files should contain console.log, prompt and an alert
 
 ## Version 1
 
-The HTML
-```
+The HTML:
+
+```html
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -51,8 +52,10 @@ The HTML
   </body>
 </html>
 ```
-The JS
-```
+
+The JS:
+
+```javascript
 function letMeKnow() {
   alert("This is an alert. So now you know");
 }
@@ -63,8 +66,10 @@ function debugMe() {
   console.log("No bugs so far! Plus this is what you asked: ", asked);
 }
 ```
-The CSS
-```
+
+The CSS:
+
+```css
 body {
   background-color: blue;
   color: antiquewhite;
@@ -77,13 +82,14 @@ h1 {
 
 ## Lab01-b
 
-1️⃣  | create four prompts   
-2️⃣  | each prompt should ask your name, age, country and fav color respectively    
-3️⃣  | Create a LIST in your html    
-4️⃣  | This list should contain four list items with name, age, country and fav color   
-5️⃣  | the values you enter in your prompt should be rendered in the frontend and the text color should be the fav color you entered   
+1️⃣ | create four prompts  
+2️⃣ | each prompt should ask your name, age, country and fav color respectively  
+3️⃣ | Create a LIST in your html  
+4️⃣ | This list should contain four list items with name, age, country and fav color  
+5️⃣ | the values you enter in your prompt should be rendered in the frontend and the text color should be the fav color you entered
 
-```<!DOCTYPE html>
+```html
+<!DOCTYPE html>
 
 <head>
 
@@ -99,7 +105,7 @@ h1 {
             background-color:antiquewhite;
             color:goldenrod;
             border: 2px black;
-            border-radius: 3px;   
+            border-radius: 3px;
         }
         button {
             height: 40px;
@@ -111,7 +117,7 @@ h1 {
 </head>
 
 <body id="bod">
-    <HEADER>    
+    <HEADER>
         <H1 onclick="onClickHandler()">This is my list</H1>
     </HEADER>
     <ul id = "list1">
