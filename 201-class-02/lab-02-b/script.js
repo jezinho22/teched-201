@@ -106,7 +106,7 @@ function getExtraInfo() {
 }
 function guessMyBirthMonth() {
   // list of possible answers - tbh you could just reduce guess to lower case, and avoid the list
-  var answer = ["January", "JANUARY", "january"];
+  var answer = ["January", "JANUARY", "january", "Jan", "jan", "JAN"];
   // var to track winning, and to take guesses
   var guessedRight = 0;
   var monthGuess = "";
