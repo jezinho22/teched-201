@@ -11,6 +11,19 @@
         padding: 20px;
         font-size: 20px;
     }
+    .parent {
+     border: 2px black dotted;
+     display: inline-block;
+    }
+    .box {
+     display: inline-block;
+     background: red;
+     width: 100px;
+     height: 100px;
+    }
+    #two {
+      background: green;
+    }
 </style>
 </head>
 <body>
@@ -43,6 +56,13 @@
             console.log(footballScore)
         }
    </script>
+
+<div class=”parent”>
+    <div class=”box” id=”one”>One</div>
+    <div class=”box” id=”two”>Two</div>
+    <div class=”box” id=”three”>Three</div>
+    <div class=”box” id=”four”>Four</div>
+</div>
 
 </body>
 </html>
