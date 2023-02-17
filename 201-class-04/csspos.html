@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Document</title>
+  <style>
+    body {
+      height: 100%;
+      width: 100%;
+      background-color: antiquewhite;
+      font-size: 30px;
+    }
+
+    p {
+      color: darkgreen;
+      font-size: 16px;
+      font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    }
+
+    .container {
+      border: 1px dotted green;
+    }
+
+    .box {
+      font-style: italic;
+      display: inline-block;
+      background-color: antiquewhite;
+      color: green;
+      width: 100px;
+      height: 60px;
+      border: 3px solid green;
+      padding: 5px;
+    }
+
+    /* relative positioning */
+
+    #one {
+      text-align: right;
+      position: relative;
+      top: 0;
+      bottom: 0;
+      right: 0;
+      left: 30px;
+    }
+
+    #two {
+      background-color: green;
+      color: antiquewhite;
+      position: relative;
+      top: 0;
+      bottom: 0;
+      right: 0;
+      left: 20px;
+    }
+
+    #three {
+      background-color: green;
+      color: antiquewhite;
+      position: relative;
+      top: 15px;
+      bottom: 0;
+      right: 0;
+      left: 30px;
+    }
+
+    #four {
+      position: relative;
+      top: 15px;
+      bottom: 0;
+      left: 20px;
+      right: 0;
+    }
+
+    /* absolute positioning */
+
+    #um {
+      text-align: right;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      right: 0;
+      left: 30px;
+    }
+
+    #dois {
+      background-color: green;
+      color: antiquewhite;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      right: 0;
+      left: 140px;
+    }
+
+    #tres {
+      background-color: green;
+      color: antiquewhite;
+      position: absolute;
+      top: 20px;
+      bottom: 0;
+      right: 0;
+      left: 300px;
+    }
+
+    #quatro {
+      position: absolute;
+      top: 20px;
+      bottom: 0;
+      left: 410px;
+      right: 0;
+    }
+    
+    #ein {
+      text-align: right;
+      position: fixed;
+      top: 400px;
+      bottom: 0;
+      right: 0;
+      left: 30px;
+    }
+
+    #zwei {
+      background-color: green;
+      color: antiquewhite;
+      position: fixed;
+      top: 400px;
+      bottom: 0;
+      right: 0;
+      left: 140px;
+    }
+
+    #drei {
+      background-color: green;
+      color: antiquewhite;
+      position: fixed;
+      top: 420px;
+      bottom: 0;
+      right: 0;
+      left: 300px;
+    }
+
+    #vier {
+      position: fixed;
+      top: 420px;
+      bottom: 0;
+      left: 410px;
+      right: 0;
+    }
+
+    /* picture with text positioned within it */
+
+.center {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  text-align: center;
+  font-size: 18px;
+}
+
+img { 
+  width: 500px;
+  height: auto;
+  opacity: 0.3;
+}
+  </style>
+</head>
+
+<body>
+
+  <div>
+    <p>Using relative you have to know where the element would have been <b></b>relative to its neighbours</b> - that is
+      its 'zero' position, and all changes are relative to that. </p>
+    <p>All changes that are made to the elements may then affect the 'normal position' and can have a huge effect on the
+      relative position. For instance if elements that are inline get wider, one may spill over into the line below -
+      moving from right of one element to way left of it, and below another element. And it's relative position moves
+      with it.</p>
+  </div>
+
+  <div class="container">
+    <div class="box" id="one">Relativ</div>
+    <div class="box" id="two">Two</div>
+    <div class="box" id="three">Thirty</div>
+    <div class="box" id="four">Four</div>
+  </div>
+
+  <div>
+    <p>With absolute position, each element is positioned relative (I know, right, but ...) to its parent - or it's
+      supposed to but it seems you have to give the <i>parent</i> position:relative (losing the will to live, now).</p>
+  </div>
+
+  <div class="container" style="position: relative;">
+    <p>Dad</p>
+    <div class="box" id="um">Absolut</div>
+    <div class="box" id="dois">Dois</div>
+    <div class="box" id="tres">Trinta e</div>
+    <div class="box" id="quatro">Quatro</div>
+  </div>
+
+  <br>
+
+  <div>
+    <p>Fixed means the items stay still on the screen - when you scroll they don't move. Like those annoying pop-up ads
+      used to - the ones with the buzzing mosquito.</p>
+  </div>
+
+  <div class="container" style="position: static;">
+    <p>Dad</p>
+    <div class="box" id="ein">Fixed</div>
+    <div class="box" id="zwei">Dois</div>
+    <div class="box" id="drei">Trinta e</div>
+    <div class="box" id="vier">Quatro</div>
+  </div>
+
+  <br>
+  <br>
+  <br>
+
+  <h2>Image Text</h2>
+
+    <p>Center text in image:</p>
+
+    <div class="container">
+        <img src="bike.jpg" alt="bike">
+        <div class="center">Centered</div>
+    </div>
+
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+
+
+</body>
+
+</html>
