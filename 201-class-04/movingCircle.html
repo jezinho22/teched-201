@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body onkeydown="moveCircle(event.key)" style="width: 1000px; height 1000px">
+
+    <script>
+
+        function moveCircle(keyPressed){
+            // console.log(event.key)
+            if (keyPressed == 'ArrowUp'){
+                console.log("UP!")
+                moveUp()
+            } else if (keyPressed == 'ArrowDown'){
+                console.log("DOWN!")
+                moveDown()
+            } else if (keyPressed == 'ArrowRight'){
+                console.log("RIGHT!")
+                moveRight()
+            } else if (keyPressed == 'ArrowLeft'){
+                console.log("LEFT!")
+                moveLeft()
+            }
+        }
+
+        //set position variables so that functions can change them 
+            var leftPx=0; 
+            var topPx=0;
+
+        // set style.left +10
+        function moveRight(){
+            leftPx +=10;
+            document.getElementById('svgCircle').style.left = leftPx
+            // console.log(leftPx)
+        }
+
+        // set style.left -10
+        function moveLeft(){
+            console.log("Left pressed")
+            leftPx -=10;
+            document.getElementById('svgCircle').style.left = leftPx
+            // console.log(leftPx)
+        } 
+        
+        // set style.top -10
+        function moveUp(){
+            topPx -=10;
+            document.getElementById('svgCircle').style.top = topPx
+            console.log(document.getElementById('svgCircle').style.top)
+        }        
+         
+        // set style.top +10
+        function moveDown(){
+            topPx +=10;
+            document.getElementById('svgCircle').style.top = topPx
+            console.log(topPx)
+        }
+
+    </script>
+    <svg id='svgCircle' width="100" height="100" style="position:relative">
+        <circle id='circle' cx="50" cy="50" r="40" stroke="green" stroke-width="2"  fill="yellow"></circle>
+    </svg>
+</body>
+</html>
