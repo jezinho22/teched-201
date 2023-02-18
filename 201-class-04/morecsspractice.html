@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<style>
+			body {
+				font-family: calibri;
+				background-color: #f0f8ff;
+			}
+		</style>
+	</head>
+
+	<body>
+		<p>
+			Change the css position for One, Two and Three to 'absolute' and
+			then make them into 3 boxes side by side by changing top, bottom,
+			right and left. See if you can make them all the same size and
+			distribute them equally. Can you make them into chunks of text?
+			<br />
+			The parent div is 600px wide and so it's possible to calculate
+			instead of guessing. Though I ended up guessing a bit when I did
+			this. <br />
+			Remember that you have to control all four sides of the block, and
+			make them appropriate distances from the top, bottom, left and right
+			edges of the parent.
+		</p>
+		<!-- parent div -->
+		<div
+			style="
+				background-color: darkblue;
+				border: 1px solid black;
+				height: 300px;
+				width: 600px;
+				margin: 30px;
+				position: relative;
+				top: 0;
+				bottom: 0;
+				left: 0;
+				right: 0;
+			">
+			<!-- child one -->
+			<div
+				style="
+					background-color: cyan;
+					color: #222;
+					border-radius: 5px;
+					position: absolute;
+					top: 50px;
+					bottom: 150px;
+					left: 0px;
+					right: 500px;
+				">
+				One
+			</div>
+			<div
+				style="
+					background-color: coral;
+					color: #222;
+					border-radius: 5px;
+					position: static;
+					top: 0;
+					bottom: 0;
+					left: 0;
+					right: 0;
+				">
+				Two
+			</div>
+			<div
+				style="
+					background-color: goldenrod;
+					color: #222;
+					border-radius: 5px;
+					position: static;
+					top: 0;
+					bottom: 0;
+					left: 0;
+					right: 0;
+				">
+				Three
+			</div>
+		</div>
+	</body>
+</html>
