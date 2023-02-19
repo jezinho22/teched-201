@@ -7,37 +7,51 @@
 
 // plays a number game
 function getGuess() {
-  console.log("Guess is working");
-  // get a random number 0 to 100
-  var myNumber = Math.round(Math.random() * 100);
-  console.log(myNumber);
-  // a checking variable for winner, a list of list elements available
-  var winner = 0;
-  var guessList = document.getElementById("list3").getElementsByTagName("li");
+	console.log("Guess is working");
+	// get a random number 0 to 100
+	var myNumber = Math.round(Math.random() * 100);
+	console.log(myNumber);
+	// a checking variable for winner, a list of list elements available
+	var winner = 0;
+	var guessList = document.getElementById("list3").getElementsByTagName("li");
 
-  // get first guess
-  var myGuess = prompt("Can you guess my number? It's between 0 and 100. You have 6 guesses.");
+	// get first guess
+	var myGuess = prompt(
+		"Can you guess my number? It's between 0 and 100. You have 6 guesses."
+	);
 
-  // loop through 5 times for 5 more guesses
-  for (var guessNumber = 0; guessNumber < 5; guessNumber++) {
-    // add each to the page, in a list element, using the for counter to select
+	// loop through 5 times for 5 more guesses
+	for (var guessNumber = 0; guessNumber < 5; guessNumber++) {
+		// add each to the page, in a list element, using the for counter to select
 
-    // compare guess with number, and respond
-    if (myGuess == myNumber) {
-      alert("Whoop, whoop! You guessed my number. It was ", myNumber);
-      var winner = 1;
-      break;
-    } else if (myGuess > myNumber) {
-      myGuess = prompt(`Too high. Try something lower. You have ${5 - guessNumber} guesses left`);
-    } else {
-      myGuess = prompt(`Too low. Try something higher. You have ${5 - guessNumber} guesses left`);
-    }
-    guessList[guessNumber].innerText = myGuess;
-  }
-  // if loop finishes without number being guessed ...
-  if (winner == 0) {
-    alert("Too bad. You ran out of guesses. Click the Guess button to play again");
-  }
+		// compare guess with number, and respond
+		if (myGuess == myNumber) {
+			alert("Whoop, whoop! You guessed my number. It was ", myNumber);
+			var winner = 1;
+			break;
+		} else if (myGuess > myNumber) {
+			myGuess = prompt(
+				`Too high. Try something lower. You have ${
+					5 - guessNumber
+				} guesses left`
+			);
+		} else {
+			myGuess = prompt(
+				`Too low. Try something higher. You have ${
+					5 - guessNumber
+				} guesses left`
+			);
+		}
+		guessList[guessNumber].innerText = myGuess;
+		console.log(guessList[guessNumber].innerText);
+	}
+
+	// if loop finishes without number being guessed ...
+	if (winner == 0) {
+		alert(
+			"Too bad. You ran out of guesses. Click the Guess button to play again"
+		);
+	}
 }
 
 // 1️⃣  | create four prompts
@@ -48,27 +62,27 @@ function getGuess() {
 //        text color should be the fav color you entered
 
 function getInfo() {
-  // debug
-  console.log("Button working");
+	// debug
+	console.log("Button working");
 
-  // prompt user for info
-  var myName = prompt("What is your name?");
-  var myAge = prompt("What is your age?");
-  var myCountry = prompt("What country would you say you are from?");
-  var myColour = prompt("What is your favourite colour?");
+	// prompt user for info
+	var myName = prompt("What is your name?");
+	var myAge = prompt("What is your age?");
+	var myCountry = prompt("What country would you say you are from?");
+	var myColour = prompt("What is your favourite colour?");
 
-  // get list elements from DOM - as a list/array
-  var listItems = document.getElementById("list1").getElementsByTagName("li");
+	// get list elements from DOM - as a list/array
+	var listItems = document.getElementById("list1").getElementsByTagName("li");
 
-  // insert messages into lit elements
-  document.getElementById("heading").innerText = myName;
-  (listItems[0].innerText = "Welcome: "), myName;
-  listItems[1].innerText = `I see you are ${myAge} years old`;
-  listItems[2].innerText = `And that you come from ${myCountry}`;
-  listItems[3].innerText = `For your amusement, the font colour has been changed to ${myColour}, your favourite colour!`;
+	// insert messages into lit elements
+	document.getElementById("heading").innerText = myName;
+	(listItems[0].innerText = "Welcome: "), myName;
+	listItems[1].innerText = `I see you are ${myAge} years old`;
+	listItems[2].innerText = `And that you come from ${myCountry}`;
+	listItems[3].innerText = `For your amusement, the font colour has been changed to ${myColour}, your favourite colour!`;
 
-  // change font colour to match user's response
-  document.getElementById("list1").style.color = myColour;
+	// change font colour to match user's response
+	document.getElementById("list1").style.color = myColour;
 }
 
 // 1️⃣  | Paste your yesterdays code into your replit or vscode
@@ -79,52 +93,65 @@ function getInfo() {
 
 // gets 4 more pieces of info
 function getExtraInfo() {
-  // debug
-  console.log("Button working");
+	// debug
+	console.log("Button working");
 
-  // prompt user for info
-  var myEducation = prompt("What is your highest education qualification?");
-  var myLanguage = prompt("What is your LEAST favourite programming language?");
-  var myJob = prompt("What is your dream job?");
-  var myHoliday = prompt("What is your dream holiday destination?");
+	// prompt user for info
+	var myEducation = prompt("What is your highest education qualification?");
+	var myLanguage = prompt(
+		"What is your LEAST favourite programming language?"
+	);
+	var myJob = prompt("What is your dream job?");
+	var myHoliday = prompt("What is your dream holiday destination?");
 
-  // check user info for specific input on language & create message
-  if (myLanguage == "Javascript" || myLanguage == "JS" || myLanguage == "js" || myLanguage == "javascript") {
-    var languageMessage = `Is that you, V? Come on, everyone loves ${myLanguage}`;
-  } else {
-    var languageMessage = `Oh yeah, everyone hates ${myLanguage}!`;
-  }
+	// check user info for specific input on language & create message
+	if (
+		myLanguage == "Javascript" ||
+		myLanguage == "JS" ||
+		myLanguage == "js" ||
+		myLanguage == "javascript"
+	) {
+		var languageMessage = `Is that you, V? Come on, everyone loves ${myLanguage}`;
+	} else {
+		var languageMessage = `Oh yeah, everyone hates ${myLanguage}!`;
+	}
 
-  // get list elements from DOM - as a list/array
-  var listItems = document.getElementById("list2").getElementsByTagName("li");
+	// get list elements from DOM - as a list/array
+	var listItems = document.getElementById("list2").getElementsByTagName("li");
 
-  // insert messages into lit elements
-  listItems[0].innerText = `Well done on achieving ${myEducation}`;
-  listItems[1].innerText = languageMessage;
-  listItems[2].innerText = `Keep working hard, and I am sure that one day you can be a ${myJob}`;
-  listItems[3].innerText = `Hey, that's my favourite too. Come on let's go to ${myHoliday}`;
+	// insert messages into lit elements
+	listItems[0].innerText = `Well done on achieving ${myEducation}`;
+	listItems[1].innerText = languageMessage;
+	listItems[2].innerText = `Keep working hard, and I am sure that one day you can be a ${myJob}`;
+	listItems[3].innerText = `Hey, that's my favourite too. Come on let's go to ${myHoliday}`;
 }
 function guessMyBirthMonth() {
-  // list of possible answers - tbh you could just reduce guess to lower case, and avoid the list
-  var answer = ["January", "JANUARY", "january", "Jan", "jan", "JAN"];
-  // var to track winning, and to take guesses
-  var guessedRight = 0;
-  var monthGuess = "";
-  var guesses = 0;
+	// list of possible answers - tbh you could just reduce guess to lower case, and avoid the list
+	var answer = ["January", "JANUARY", "january", "Jan", "jan", "JAN"];
+	// var to track winning, and to take guesses
+	var guessedRight = 0;
+	var monthGuess = "";
+	var guesses = 0;
 
-  // loop the guessing until guessed or had 6 guesses
-  while (guessedRight == 0 && guesses < 6) {
-    monthGuess = prompt(`Can you guess what month I was born in? You have ${6 - guesses} guesses.`);
+	// loop the guessing until guessed or had 6 guesses
+	while (guessedRight == 0 && guesses < 6) {
+		monthGuess = prompt(
+			`Can you guess what month I was born in? You have ${
+				6 - guesses
+			} guesses.`
+		);
 
-    // check answer against list of possibles - loop through possibles
-    for (i = 0; i < answer.length; i++) {
-      if (monthGuess.trim() == answer[i]) {
-        guessedRight = 1;
-        alert("You got it! I was born in January. Not only that but my birthday is also in January! Every year!");
-      }
-    }
-    guesses++;
-  }
+		// check answer against list of possibles - loop through possibles
+		for (i = 0; i < answer.length; i++) {
+			if (monthGuess.trim() == answer[i]) {
+				guessedRight = 1;
+				alert(
+					"You got it! I was born in January. Not only that but my birthday is also in January! Every year!"
+				);
+			}
+		}
+		guesses++;
+	}
 }
 
 // 1️⃣ 2️⃣ 3️⃣ 4️⃣ 5️⃣ 6️⃣ 7️⃣ 8️⃣ 9️⃣ 🔟
