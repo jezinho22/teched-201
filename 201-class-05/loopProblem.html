@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Loop problem</title>
+	</head>
+	<body>
+		<div
+			id="demo"
+			style="
+				background-color: blue;
+				color: antiquewhite;
+				margin: 100px 0 20px 0;
+			">
+			This section is a demo to show what happens when I try to use a loop
+			to write to html. The loop iterates three times, and should amend
+			the html each time. Try it and see what actually happens.
+		</div>
+
+		<button id="demoButton" onclick="startLoop()">Start loop</button>
+
+		<script>
+			function startLoop() {
+				for (i = 0; i < 3; i++) {
+					anotherNumber = prompt("Give a number");
+					messageSoFar = document.getElementById("demo").innerText;
+					document.getElementById(
+						"demo"
+					).innerText = `${messageSoFar}\nLoop #${i}: ${anotherNumber}`;
+				}
+			}
+		</script>
+	</body>
+</html>
