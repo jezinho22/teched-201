@@ -37,3 +37,18 @@ Practice activities
 3. What should you consider when choosing fonts for an HTML document? _the feel of the writing; the function of the piece of text eg header, para; accessibility - sans serif is generally felt to be easier to read; availability - choose from the 'safe list' of fonts that all browsers can render_
 4. What do font-size, font-weight, and font-style do to HTML text elements? _`font-size:` = bigger & smaller; `font-weight:` = bold and how bold; `font-style:` = italic/oblique and how oblique_
 5. Describe two ways you could add spacing around the characters displayed in an h1 element _using `letter-spacing:` or `line-height:` or `word-spacing:` I guess_
+
+## JPEG
+
+<img src="jpeg.png" style="width:100px; height:100px"/>
+A JPG icon
+
+### JPEG stands for Joint Photographic Expert Group image
+
+It has quite a few suffixes: .jpg, .jpeg, .jfif, .pjpeg, .pjp
+
+It is very widely used and well-established as a format, and when it first came out it represented a huge step change in file size compared to bitmaps. However, it reduces file-size by "losing" information, and so jpgs can lose details that you might want to keep.
+
+Use it for photos of holidays to send to people who won't want to print them. Use it for profile pictures that are small anyway.
+
+Don't use it for things that require detail - things that people may wnat to print and display, or refer to in fine detail, like pictures of text, screenshots.
