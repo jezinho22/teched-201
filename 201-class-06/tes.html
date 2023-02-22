@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<!-- Task
+1️⃣ | Create 10 elements with different ids
+2️⃣ | Create a button with event handler and event listener
+3️⃣ | When someone clicks the button all the innerHTML and also all the styles should change -->
+		<script>
+			function changeDivs() {
+				document.getElementById("div1").innerText =
+					"Hey, I've changed! What do you think?";
+				document.getElementById("div2").innerText =
+					"Hey, I've changed! What do you think?";
+				document.getElementById("div3").innerText =
+					"Hey, I've changed! What do you think?";
+				document.getElementById("div4").innerText =
+					"Hey, I've changed! What do you think?";
+				document.getElementById("div5").innerText =
+					"Hey, I've changed! What do you think?";
+				document.getElementById("div6").innerText =
+					"Hey, I've changed! What do you think?";
+				document.getElementById("div7").innerText =
+					"Hey, I've changed! What do you think?";
+				document.getElementById("div8").innerText =
+					"Hey, I've changed! What do you think?";
+				document.getElementById("div9").innerText =
+					"Hey, I've changed! What do you think?";
+				document.getElementById("div10").innerText =
+					"Hey, I've changed! What do you think?";
+
+				document.getElementById("div1").style.color = "red";
+				document.getElementById("div2").style.color = "red";
+				document.getElementById("div3").style.color = "red";
+				document.getElementById("div4").style.color = "red";
+				document.getElementById("div5").style.color = "red";
+				document.getElementById("div6").style.color = "red";
+				document.getElementById("div7").style.color = "red";
+				document.getElementById("div8").style.color = "red";
+				document.getElementById("div9").style.color = "red";
+				document.getElementById("div10").style.color = "red";
+				console.log("button working");
+			}
+		</script>
+	</head>
+	<body>
+		<script>
+			function changeAgain() {
+				let v = document.getElementsByClassName("divs");
+				console.log(v);
+				for (let i = 0; i < v.length; i++) {
+					v[i].innerHTML =
+						"Hey, I've changed again! What do you think?";
+					v[i].style.color = "blue";
+					v[i].style.font = "bold 20px sans-serif";
+				}
+				//  document.getElementsByClassName('divs').style.font = italic 1.5em sans-serif
+			}
+		</script>
+
+		<button onclick="changeDivs()">Change Divs</button>
+		<button onclick="changeAgain()">Change Again</button>
+
+		<div class="divs" id="div1">Div 1</div>
+		<div class="divs" id="div2">Div 2</div>
+		<div class="divs" id="div3">Div 3</div>
+		<div class="divs" id="div4">Div 4</div>
+		<div class="divs" id="div5">Div 5</div>
+		<div class="divs" id="div6">Div 6</div>
+		<div class="divs" id="div7">Div 7</div>
+		<div class="divs" id="div8">Div 8</div>
+		<div class="divs" id="div9">Div 9</div>
+		<div class="divs" id="div10">Div 10</div>
+	</body>
+</html>
