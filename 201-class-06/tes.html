@@ -6,6 +6,7 @@
 2️⃣ | Create a button with event handler and event listener
 3️⃣ | When someone clicks the button all the innerHTML and also all the styles should change -->
 		<script>
+			// simplest way - get each one individually and change innerText and then color
 			function changeDivs() {
 				document.getElementById("div1").innerText =
 					"Hey, I've changed! What do you think?";
@@ -40,23 +41,21 @@
 				document.getElementById("div10").style.color = "red";
 				console.log("button working");
 			}
+			// get elements by classname ("divs") results in a list (divArray) of the divs
+			function changeAgain() {
+				let divArray = document.getElementsByClassName("divs");
+				console.log(v);
+				// go through divArray and change innerHTML, color and font on each one
+				for (let i = 0; i < divArray.length; i++) {
+					divArray[i].innerHTML =
+						"Hey, I've changed again! What do you think?";
+					divArray[i].style.color = "blue";
+					divArray[i].style.font = "bold 20px sans-serif";
+				}
+			}
 		</script>
 	</head>
 	<body>
-		<script>
-			function changeAgain() {
-				let v = document.getElementsByClassName("divs");
-				console.log(v);
-				for (let i = 0; i < v.length; i++) {
-					v[i].innerHTML =
-						"Hey, I've changed again! What do you think?";
-					v[i].style.color = "blue";
-					v[i].style.font = "bold 20px sans-serif";
-				}
-				//  document.getElementsByClassName('divs').style.font = italic 1.5em sans-serif
-			}
-		</script>
-
 		<button onclick="changeDivs()">Change Divs</button>
 		<button onclick="changeAgain()">Change Again</button>
 

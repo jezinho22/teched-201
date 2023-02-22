@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+		<style>
+			body {
+				font: 12px sans-serif;
+			}
+			h3 {
+				padding: 10px;
+				font: 16px normal;
+				color: #9f4221;
+			}
+			button {
+				background-color: #ff6b35;
+				color: #efefd0;
+				border-radius: 5px;
+				box-shadow: 2px 2px pink;
+				border: none;
+			}
+			button:hover {
+				background-color: #9f4221;
+				height: 18px;
+				width: 54px;
+			}
+		</style>
+	</head>
+	<body>
+		<script>
+			function create() {
+				console.log("Working");
+				let city = prompt("Please input a city");
+				let liEl = document.createElement("li");
+				liEl.innerText = city;
+				liEl.style =
+					"display: block; width: auto; max-width: 20%; margin: 5px; background-color:#783219; color: #efefd0; border-radius: 3px; padding:5px; box-shadow: 2px 2px 2px #783219";
+
+				document.getElementById("cities").appendChild(liEl);
+			}
+		</script>
+
+		<div
+			id="main"
+			style="
+				background-color: pink;
+				height: 800px;
+				width: 752px;
+				position: relative;
+				top: 63px;
+				bottom: 0;
+				right: 0;
+				left: 190px;
+				text-align: left;
+			">
+			<h3>We have branches in these cities:</h3>
+			<ul id="cities"></ul>
+		</div>
+		<div
+			id="side"
+			style="
+				background-color: #efefd0;
+				width: 150px;
+				height: 800px;
+				position: fixed;
+				top: 80px;
+				bottom: 0px;
+				left: 10px;
+				right: 0;
+				color: bisque;
+				font-size: 10px;
+				text-align: center;
+				padding: 20px;
+			">
+			<button onclick="create()">Create</button>
+		</div>
+		<header
+			style="
+				background-color: #ff6b35;
+				color: #efefd0;
+				text-shadow: 1px 1px 2px #783219;
+				height: 80px;
+				width: 940px;
+				position: fixed;
+				top: 0;
+				bottom: 0;
+				right: 0;
+				left: 10px;
+				text-align: center;
+			">
+			<div>
+				<div style="padding: 20px 10px; display: inline-block">
+					<h1>SALMON COOKIES</h1>
+					<img
+						src="salmon.jpeg"
+						style="
+							position: fixed;
+							top: 10px;
+							right: 100px;
+							height: 60px;
+							width: 60px;
+						" />
+				</div>
+			</div>
+
+			<div style="text-align: right"></div>
+		</header>
+		<footer
+			style="
+				background-color: #ff6b35;
+				width: 900px;
+				height: 50px;
+				position: fixed;
+				top: 430px;
+				bottom: 0px;
+				left: 10px;
+				right: 0;
+				color: bisque;
+				font-size: 10px;
+				text-align: center;
+				padding: 20px;
+				/* opacity: 0.5; */
+			"></footer>
+	</body>
+</html>
