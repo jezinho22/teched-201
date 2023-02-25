@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+		<style>
+			body {
+				font: 12px sans-serif;
+			}
+			h3 {
+				padding: 10px;
+				font: 16px normal;
+				color: #9f4221;
+			}
+			button {
+				background-color: #ff6b35;
+				color: #efefd0;
+				border-radius: 5px;
+				box-shadow: 2px 2px pink;
+				border: none;
+			}
+			button:hover {
+				background-color: #9f4221;
+				height: 18px;
+				width: 54px;
+			}
+			table {
+				background-color: #efefd0;
+				border: 1px solid black;
+				width: 80%;
+				padding: 5px;
+				margin: 0 10px;
+			}
+			th {
+				background-color: lightseagreen;
+				color: #efefd0;
+				border: 1px solid black;
+			}
+			td {
+				background-color: palevioletred;
+				border: 1 px solid black;
+				color: black;
+			}
+			p {
+				margin: 10px;
+			}
+
+			/* Task
+
+1️⃣  | When a button is clicked we should get four prompts -> city, min-customers, max-customers, cookies-sold
+2️⃣  | Now this data should be displayed in the table
+3️⃣  | The table should contain four columns ->  city, min-customers, max-customers, cookies-sold. */
+		</style>
+	</head>
+	<body>
+		<script>
+			function create() {
+				console.log("Working");
+
+				// create parent row
+				let rowElement = document.createElement("tr");
+				// create cells
+				let cityCell = document.createElement("td");
+				let minCustomerCell = document.createElement("td");
+				let maxCustomerCell = document.createElement("td");
+				let cookiesCell = document.createElement("td");
+
+				// get user input
+				let city = prompt("What is the name of the city?");
+				let minCustomers = prompt(
+					"What is your lowest customer footfall per day?"
+				);
+				let maxCustomers = prompt(
+					"What is the highest customer footfall per day?"
+				);
+				let cookies = prompt(
+					"What are your average cookie sales per day?"
+				);
+
+				cityCell.innerText = city;
+				minCustomerCell.innerText = minCustomers;
+				maxCustomerCell.innerText = maxCustomers;
+				cookiesCell.innerText = cookies;
+
+				rowElement.appendChild(cityCell);
+				rowElement.appendChild(minCustomerCell);
+				rowElement.appendChild(maxCustomerCell);
+				rowElement.appendChild(cookiesCell);
+
+				document.getElementById("table1").appendChild(rowElement);
+			}
+		</script>
+
+		<div
+			id="main"
+			style="
+				background-color: pink;
+				height: 800px;
+				width: 752px;
+				position: relative;
+				top: 63px;
+				bottom: 0;
+				right: 0;
+				left: 190px;
+				text-align: left;
+			">
+			<h3>Locations:</h3>
+			<p>We have stores in these cities:</p>
+			<table id="table1">
+				<th>City</th>
+				<th>Lowest number of customers</th>
+				<th>Highest number of customers</th>
+				<th>Number of cookies sold</th>
+			</table>
+		</div>
+		<div
+			id="side"
+			style="
+				background-color: #efefd0;
+				width: 150px;
+				height: 800px;
+				position: fixed;
+				top: 80px;
+				bottom: 0px;
+				left: 10px;
+				right: 0;
+				color: antiquewhite;
+				font-size: 10px;
+				text-align: center;
+				padding: 20px;
+			">
+			<button onclick="create()">Create +</button>
+		</div>
+		<header
+			style="
+				background-color: #ff6b35;
+				color: #efefd0;
+				text-shadow: 1px 1px 2px #783219;
+				height: 80px;
+				width: 940px;
+				position: fixed;
+				top: 0;
+				bottom: 0;
+				right: 0;
+				left: 10px;
+				text-align: center;
+			">
+			<div>
+				<div style="padding: 20px 10px; display: inline-block">
+					<h1>SALMON COOKIES</h1>
+					<img
+						src="salmon_cookies.jpg"
+						style="
+							border-radius: 40px;
+							border: 2px solid white;
+							position: fixed;
+							top: 10px;
+							right: 100px;
+							height: 80px;
+							width: 80px;
+						" />
+				</div>
+			</div>
+
+			<div style="text-align: right"></div>
+		</header>
+		<footer
+			style="
+				background-color: #ff6b35;
+				width: 900px;
+				height: 50px;
+				position: fixed;
+				top: 430px;
+				bottom: 0px;
+				left: 10px;
+				right: 0;
+				color: antiquewhite;
+				font-size: 10px;
+				text-align: center;
+				padding: 20px;
+				/* opacity: 0.5; */
+			"></footer>
+	</body>
+</html>
