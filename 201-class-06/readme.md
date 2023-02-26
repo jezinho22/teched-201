@@ -33,7 +33,7 @@ const dog = {
 
 <a href="http://simpleprogrammer.com/2013/07/15/understanding-the-problem-domain-is-the-hardest-part-of-programming">Understanding the problem domain is the hardest part of programming</a>
 
-<p style="color: green;">Spend your time understanding the problem - until it really makes sense. Then spend time 'manually' trying out a solution - eg verbally, on paper, physically. Then spend time writing the solution in words - in pseudo-code. Spend much less time converting this into actual code, full code, maybe starting from the least elegant, most brute force, longwinded solution. Finally optimise as per parameters given in the problem</p>
+<p style="color: green;">Spend your time understanding the problem - until it really makes sense. Then spend time 'manually' trying out a solution - eg verbally, on paper, physically. Then see if you can optimise it, verbally and manually. Then spend time writing the solution in words - in pseudo-code - in comments in the IDE. Spend much less time converting this into actual code, writing between the lines of pseudo-code comments. This helps make code more semantic eg in naming of variables and functions. Finally optimise if you can.</p>
 
 <a href="https://betterprogramming.pub/intermediate-javascript-whats-the-difference-between-primitive-values-and-object-references-e863d70677b" target="_blank">What’s the difference between primitive values and object references in JavaScript?</a>
 
