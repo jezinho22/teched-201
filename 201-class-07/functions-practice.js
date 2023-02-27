@@ -56,4 +56,5 @@ let nameValue = function (name) {
 	return totalASCII;
 };
 console.log(nameValue("Jez"));
+
 // 5 arrow functions

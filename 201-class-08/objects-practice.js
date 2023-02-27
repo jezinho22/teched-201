@@ -1,3 +1,66 @@
+// Lesson object practice from V's code
+const eveningClass = {
+	class_list: ["paisley"]
+	paisley: {
+		first_name: "Paisley",
+		last_name: "Simpson",
+		age: 23,
+		home: "Wramplingham",
+		fav_colour: "orange",
+	},
+	george: {
+		first_name: "George",
+		last_name: "Green",
+		age: 30,
+		home: "London",
+		fav_colour: "green",
+	},
+	carla: {
+		first_name: "Carla",
+		last_name: "Lyman",
+		age: 23,
+		home: "Lynchburg, Virginia",
+		fav_colour: "purple",
+	},
+	jane: {
+		first_name: "Jane",
+		last_name: "Grove",
+		age: 23,
+		home: "Liverpool",
+		fav_colour: "teal",
+	},
+	vee: {
+		first_name: "Priyatham",
+		last_name: "Varma",
+		age: 29,
+		home: "Norwich",
+		fav_colour: "blue",
+	},
+	jez: {
+		first_name: "Jeremy",
+		last_name: "Johns",
+		age: 55,
+		home: "Norwich",
+		fav_colour: "black",
+	},
+	introduceMe: function (name) {
+		console.log(
+			`Please may I introduce ${this[name].first_name} ${this[name].last_name}, who is ${this[name].age} and lives in ${this[name].home}`
+		);
+	},
+};
+
+console.log(eveningClass.carla.home);
+console.log(eveningClass.jane.last_name);
+console.log(eveningClass.george.first_name + )
+
+eveningClass.introduceMe("paisley");
+eveningClass.introduceMe("jane");
+eveningClass.introduceMe("george");
+eveningClass.introduceMe("carla");
+eveningClass.introduceMe("vee");
+eveningClass.introduceMe("jez");
+
 // Task 1
 // var epicFailVideo = function (epicRating, hasAnimals) {
 // 	this.epicRating = epicRating;
@@ -160,42 +223,55 @@
 
 // My own task 4
 // object literal
-var data = {
-	fname: "foo",
-	addOne: function (num) {
-		return num + 1;
-	},
-};
+// var data = {
+// 	fname: "foo",
+// 	addOne: function (num) {
+// 		return num + 1;
+// 	},
+// };
 
-console.log(`data.fname: ${data.fname}`);
-console.log(`data.addOne(4): ${data.addOne(4)}`);
+// console.log(`data.fname: ${data.fname}`);
+// console.log(`data.addOne(4): ${data.addOne(4)}`);
 
-data.fname = "bar";
-console.log(`data.fname after bar change: ${data.fname}`);
+// data.fname = "bar";
+// console.log(`data.fname after bar change: ${data.fname}`);
 
-data.lname = "baz";
-console.log(`data.lname: ${data.lname}`);
+// data.lname = "baz";
+// console.log(`data.lname: ${data.lname}`);
 
-data.say = function () {
-	return "this is the say function";
-};
-console.log(data.say());
+// data.say = function () {
+// 	return "this is the say function";
+// };
+// console.log(data.say());
 
-// constructor function
-var Foo = function () {
-	console.log("welcome to your new instance object");
-	// variable set inside con func can't be accessed except via funcs within the con func
-	var _color = "blue";
-	this.getColor = function () {
-		return _color;
-	};
-	this.setColor = function (newColor) {
-		_color = newColor;
-	};
-};
+// // constructor function
+// var Foo = function () {
+// 	console.log("welcome to your new instance object");
+// 	// variable set inside con func can't be accessed except via funcs within the con func
+// 	var _color = "blue";
+// 	this.getColor = function () {
+// 		return _color;
+// 	};
+// 	this.setColor = function (newColor) {
+// 		_color = newColor;
+// 	};
+// };
 
-var bar = new Foo(); // "welcome to your new instance object"
-console.log(bar._color); // undefined - you can't access it from outside the object
-console.log(bar.getColor()); // "blue"
-bar.setColor("red");
-console.log(bar.getColor()); // "red"
+// var bar = new Foo(); // "welcome to your new instance object"
+// console.log(bar._color); // undefined - you can't access it from outside the object
+// console.log(bar.getColor()); // "blue"
+// bar.setColor("red");
+// console.log(bar.getColor()); // "red"
+
+// object literals
+// this was to answer the question about what the key word "this" does differently in obj lits and func constructors
+// const myObjectLiteral1 = {
+// 	name: "Jez",
+// 	age: 55,
+// 	hello: function () {
+// 		console.log("this.name " + this.name);
+// 		console.log("object.name " + myObjectLiteral1.name);
+// 		console.log("just name" + name);
+// 	},
+// };
+// myObjectLiteral1.hello();
