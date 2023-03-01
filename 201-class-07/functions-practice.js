@@ -58,3 +58,16 @@ let nameValue = function (name) {
 console.log(nameValue("Jez"));
 
 // 5 arrow functions
+let myFunction = (x) => x * x;
+console.log(myFunction(9));
+
+let my2Function = (name) => `Hey there, ${name}`;
+console.log(my2Function("Jez"));
+
+let my3Function = (bill) => `Bill with tip comes to £${bill + bill * 0.2}`;
+console.log(my3Function(10.0));
+
+let my4Function = (age) => `Your age (${age}) in dog years is ${age / 7}`;
+console.log(my4Function(55));
+
+let my5Function = (inches) => `Your distance ()`;

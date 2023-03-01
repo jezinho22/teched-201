@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en-us">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width" />
+		<title>Flexbox: Task 1</title>
+
+		<style>
+			body {
+				background-color: #fff;
+				color: #333;
+				font: 1.2em / 1.5 Helvetica Neue, Helvetica, Arial, sans-serif;
+				padding: 1em;
+				margin: 0;
+			}
+			ul {
+				max-width: 700px;
+				list-style: none;
+				padding: 10px;
+				margin: 50px 0;
+				border: 2px solid black;
+				border-radius: 10px;
+			}
+
+			li {
+				background-color: #4d7298;
+				border: 2px solid #77a6b6;
+				border-radius: 0.5em;
+				color: #fff;
+				padding: 0.5em;
+				display: inline-block;
+				text-decoration: none;
+			}
+			.task1parent {
+				display: flex;
+				flex-flow: row wrap;
+				justify-content: space-between;
+			}
+			.task2parent {
+				display: flex;
+				flex-flow: row nowrap;
+			}
+			.task2child1 {
+				flex: 2;
+			}
+			.task2child2 {
+				flex: 1;
+			}
+			.task3parent {
+				border: 2px solid black;
+				display: flex;
+				flex-flow: row nowrap;
+				justify-content: center;
+				align-items: center;
+				height: 200px;
+				width: 200px;
+			}
+			.task4parent {
+				display: flex;
+				flex-flow: row wrap;
+				justify-content: space-between;
+				width: 600px;
+			}
+			.task4child {
+				flex: 1 0 auto;
+			}
+		</style>
+	</head>
+
+	<body>
+		<!-- Task One -->
+		<nav>
+			<ul class="task1parent">
+				<li>Home</li>
+				<li>About Us</li>
+				<li>Our Products</li>
+				<li>Contact Us</li>
+			</ul>
+		</nav>
+		<!-- Task Two -->
+		<ul class="task2parent">
+			<li class="task2child1">I am small</li>
+			<li class="task2child2">
+				I have more content than the very small item.
+			</li>
+			<li class="task2child2">
+				I have lots of content. So much content that I don't know where
+				it is all going to go. I'm glad that CSS is pretty good at
+				dealing with situations where we end up with more words than
+				expected!
+			</li>
+		</ul>
+
+		<!-- Task Three -->
+		<ul class="task3parent">
+			<li class="task3child">Center me</li>
+		</ul>
+
+		<!-- Task Four -->
+		<ul class="task4parent">
+			<li class="task4child">turnip</li>
+			<li class="task4child">greens</li>
+			<li class="task4child">yarrow</li>
+			<li class="task4child">ricebean</li>
+			<li class="task4child">rutabaga</li>
+			<li class="task4child">endive</li>
+			<li class="task4child">cauliflower</li>
+			<li class="task4child">sea lettuce</li>
+			<li class="task4child">kohlrabi</li>
+			<li class="task4child">amaranth</li>
+		</ul>
+	</body>
+</html>

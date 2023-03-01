@@ -1,6 +1,5 @@
 // Lesson object practice from V's code
 const eveningClass = {
-	class_list: ["paisley"]
 	paisley: {
 		first_name: "Paisley",
 		last_name: "Simpson",
@@ -52,7 +51,6 @@ const eveningClass = {
 
 console.log(eveningClass.carla.home);
 console.log(eveningClass.jane.last_name);
-console.log(eveningClass.george.first_name + )
 
 eveningClass.introduceMe("paisley");
 eveningClass.introduceMe("jane");
@@ -60,6 +58,16 @@ eveningClass.introduceMe("george");
 eveningClass.introduceMe("carla");
 eveningClass.introduceMe("vee");
 eveningClass.introduceMe("jez");
+
+// refactored - it seems that with 'this' used in object method introduceMe, it then won't work when
+// called by forEach, at least as an arrow function
+var eveClassKeys = Object.keys(eveningClass);
+
+eveClassKeys.forEach((key) =>
+	console.log(
+		`And now, please may I introduce ${eveningClass[key].first_name} ${eveningClass[key].last_name}, who is ${eveningClass[key].age} and lives in ${eveningClass[key].home}`
+	)
+);
 
 // Task 1
 // var epicFailVideo = function (epicRating, hasAnimals) {
