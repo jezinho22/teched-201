@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+	</head>
+	<body>
+		<h1>Pirates and their Drinks</h1>
+
+		<button onclick="drinkSelector()">Pirate Button</button>
+
+		<div id="pirates"></div>
+		<script>
+			// handler
+			function drinkSelector() {
+				console.log("Aye, Jim lad");
+
+				// create 3 prompts to get responses
+				var pirateName = prompt("What is your name, Matey?");
+				var drink1 = prompt("And what be your poison, " + pirateName);
+				var drink2 = prompt("And if we've none of that, what then");
+
+				// create the list elements to display the data
+				var ulElement = document.createElement("ul");
+				var liName = document.createElement("li");
+				liName.innerText = "Pirate name: " + pirateName;
+				var drinkPoisonLi = document.createElement("li");
+				drinkPoisonLi.innerText = "Prefered drink: " + drink1;
+				var drinkPoisonLi2 = document.createElement("li");
+				drinkPoisonLi2.innerText = "Will also drink: " + drink2;
+
+				// put li into ul
+				ulElement.appendChild(liName);
+				ulElement.appendChild(drinkPoisonLi);
+				ulElement.appendChild(drinkPoisonLi2);
+
+				// append to page element
+				var pageElement = document.getElementById("pirates");
+				pageElement.appendChild(ulElement);
+			}
+		</script>
+	</body>
+</html>
