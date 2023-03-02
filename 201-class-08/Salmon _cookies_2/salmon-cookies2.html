@@ -45,12 +45,37 @@
 
 		<style>
 			body {
-				font: 12px sans-serif;
+				margin: 0;
+				font-family: "Gill Sans", "Gill Sans MT", Calibri,
+					"Trebuchet MS", sans-serif;
 			}
-			h3 {
-				padding: 10px;
-				font: 16px normal;
-				color: #9f4221;
+
+			/* header div and container */
+			.header {
+				min-height: 60px;
+				background-color: rgb(255, 107, 53);
+				color: #efefd0;
+				text-shadow: 1px 1px 2px #783219;
+				padding: 10px 20px;
+				text-align: center;
+				display: flex;
+				align-items: center;
+			}
+			.nav {
+				list-style-type: none;
+				border: ;
+			}
+			/*  main container */
+			.main {
+				min-height: 350px;
+				min-width: 100%;
+				display: flex;
+				flex-flow: row nowrap;
+			}
+
+			/* side menu space */
+			.side {
+				min-width: 25%;
 			}
 			button {
 				background-color: #ff6b35;
@@ -58,22 +83,30 @@
 				border-radius: 5px;
 				box-shadow: 2px 2px pink;
 				border: none;
+				margin: 20px;
 			}
 			button:hover {
 				background-color: #9f4221;
 				height: 18px;
 				width: 54px;
 			}
+
+			/* hero content */
+			.hero {
+				width: 75%;
+			}
 			table {
 				background-color: #efefd0;
 				border: 1px solid black;
-				width: 600px;
+				width: 300px;
 				padding: 5px;
 				margin: 0 10px;
+				font-size: 12px;
 			}
 			th {
-				background-color: lightseagreen;
-				color: #efefd0;
+				background-color: lightblue;
+				color: black;
+				font-weight: light;
 				border: 1px solid black;
 			}
 			td {
@@ -81,48 +114,63 @@
 				border: 1 px solid black;
 				color: black;
 			}
+			/* footer container */
+			.footer {
+				min-height: 80px;
+				background-color: #ff6b35;
+
+				color: #efefd0;
+				font-size: 10px;
+				text-align: center;
+				padding: 20px;
+			}
+
 			p {
 				margin: 10px;
 			}
-
-			/* Task
-
-1️⃣  | When a button is clicked we should get four prompts -> city, min-customers, max-customers, cookies-sold
-2️⃣  | Now this data should be displayed in the table
-3️⃣  | The table should contain four columns ->  city, min-customers, max-customers, cookies-sold. */
+			@media (max-width: 400px) {
+				.main {
+					min-height: 350px;
+					display: flex;
+					flex-flow: column;
+				}
+				.side {
+					min-width: 100%;
+				}
+				.hero {
+					width: 100%;
+				}
+			}
 		</style>
 	</head>
 	<body>
-		<div
-			id="main_container"
-			style="
-				display: flex;
-				flex-flow: row wrap;
-				height: 800px;
-				width: 940px;
-			">
-			<side
-				id="side"
+		<div class="header">
+			<img
+				src="salmon_cookies.jpg"
 				style="
-					background-color: #efefd0;
-					width: 150px;
-					height: 800px;
-
-					color: antiquewhite;
-					font-size: 10px;
-					text-align: center;
-					padding: 20px;
-				">
+					border-radius: 40px;
+					border: 2px solid #efefd0;
+					height: 80px;
+					width: 80px;
+				" />
+			<h1 style="border: 1px solid black; padding: 25px 0">
+				SALMON COOKIES
+			</h1>
+			<nav>
+				<ul class="nav">
+					<li class="navItem">Sales</li>
+					<li class="navItem">Locations</li>
+					<li class="navItem">Blog</li>
+					<li class="navItem">About us</li>
+				</ul>
+			</nav>
+		</div>
+		<div class="main">
+			<div class="side">
 				<button onclick="create()">Create +</button>
-			</side>
-			<div
-				id="main"
-				style="
-					background-color: pink;
-
-					text-align: left;
-				">
-				<h3>Locations:</h3>
+			</div>
+			<div class="hero" style="background-color: pink; text-align: left">
+				<p>Locations:</p>
 				<p>We have stores in these cities:</p>
 				<table id="table1">
 					<th>City</th>
@@ -132,55 +180,6 @@
 				</table>
 			</div>
 		</div>
-
-		<header
-			style="
-				background-color: #ff6b35;
-				color: #efefd0;
-				text-shadow: 1px 1px 2px #783219;
-				height: 80px;
-				width: 940px;
-				position: fixed;
-				top: 0;
-				bottom: 0;
-				right: 0;
-				left: 10px;
-				text-align: center;
-			">
-			<div>
-				<div style="padding: 20px 10px; display: inline-block">
-					<h1>SALMON COOKIES</h1>
-					<img
-						src="salmon_cookies.jpg"
-						style="
-							border-radius: 40px;
-							border: 2px solid white;
-							position: fixed;
-							top: 10px;
-							right: 100px;
-							height: 80px;
-							width: 80px;
-						" />
-				</div>
-			</div>
-
-			<div style="text-align: right"></div>
-		</header>
-		<footer
-			style="
-				background-color: #ff6b35;
-
-				color: antiquewhite;
-				font-size: 10px;
-				text-align: center;
-				padding: 20px;
-				width: 900px;
-				height: 50px;
-				position: fixed;
-				top: 430px;
-				bottom: 0px;
-				left: 10px;
-				right: 0; /* opacity: 0.5; */
-			"></footer>
+		<div class="footer">Footer</div>
 	</body>
 </html>
