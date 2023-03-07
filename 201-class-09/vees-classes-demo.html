@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Cars by pixel</title>
+	</head>
+	<body>
+		<h1>CARS</h1>
+
+		<button onclick="carsAttributes()">Enter the car details</button>
+
+		<script>
+			// Function when the button is clicked
+			function carsAttributes() {
+				var georgeCarColor = prompt("enter car color");
+				var georgeCarBrand = prompt("Enter car brand");
+				var georgeCarCost = prompt("Enter the price");
+
+				// CLASS -> everything/everyone
+				class Cars {
+					constructor(_name, _color, _brand, _cost) {
+						this.name = _name;
+						this.color = _color;
+						this.brand = _brand;
+						this.cost = _cost;
+					}
+
+					run() {
+						return "accelerator is pressed";
+					}
+
+					stop() {
+						return "brake is pressed";
+					}
+
+					change() {
+						return "clutch is pressed";
+					}
+
+					buy() {
+						return "I bought the car for " + this.cost;
+					}
+				}
+
+				// OBJECT -> GEORGE
+				var georgeCarObject = {};
+
+				// Properties
+				georgeCarObject.color = georgeCarColor;
+				georgeCarObject.brand = georgeCarBrand;
+				georgeCarObject.cost = georgeCarCost;
+
+				// Methods
+				georgeCarObject.run = function () {
+					return "accelerator is pressed";
+				};
+
+				georgeCarObject.stop = function () {
+					return "brake is pressed";
+				};
+
+				georgeCarObject.change = function () {
+					return "clutch is pressed";
+				};
+
+				georgeCarObject.buy = function () {
+					return "I bought the car for " + this.cost;
+				};
+
+				// "this" referes to the object itself --> georgeCarObject
+				// "this" should be inside a method(always)
+
+				console.log(georgeCarObject.buy());
+			}
+		</script>
+	</body>
+</html>

@@ -11,10 +11,12 @@ How can using certain properties of flexbox negatively impact accessibility? <sp
 
 Read up to “Flex-Flow Shorthand”
 
-What are some advantages of using flexbox over float? <span style="color:orange">It could not do the following: Vertically centering a block of content inside its parent.
-Making all the children of a container take up an equal amount of the available width/height, regardless of how much width/height is available.
-Making all columns in a multiple-column layout adopt the same height even if they contain a different amount of content</span>  
-How does this topic connect with your long term goals? <span style="color:orange"></span>
+What are some advantages of using flexbox over float? <span style="color:orange">It could not do the following:
+
+-   Vertically centering a block of content inside its parent.
+-   Making all the children of a container take up an equal amount of the available width/height, regardless of how much width/height is available.
+-   Making all columns in a multiple-column layout adopt the same height even if they contain a different amount of content</span>  
+    How does this topic connect with your long term goals? <span style="color:orange">Not very sure of that at the moment, but being able to arrange things more closely to how I want rather than to the limitations of the medium is good. It will certainly allow me to improve all of the personal projects I have so far undertaken</span>
 
 ## Bookmark and Review
 

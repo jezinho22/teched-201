@@ -1,73 +1,73 @@
 // Lesson object practice from V's code
-const eveningClass = {
-	paisley: {
-		first_name: "Paisley",
-		last_name: "Simpson",
-		age: 23,
-		home: "Wramplingham",
-		fav_colour: "orange",
-	},
-	george: {
-		first_name: "George",
-		last_name: "Green",
-		age: 30,
-		home: "London",
-		fav_colour: "green",
-	},
-	carla: {
-		first_name: "Carla",
-		last_name: "Lyman",
-		age: 23,
-		home: "Lynchburg, Virginia",
-		fav_colour: "purple",
-	},
-	jane: {
-		first_name: "Jane",
-		last_name: "Grove",
-		age: 23,
-		home: "Liverpool",
-		fav_colour: "teal",
-	},
-	vee: {
-		first_name: "Priyatham",
-		last_name: "Varma",
-		age: 29,
-		home: "Norwich",
-		fav_colour: "blue",
-	},
-	jez: {
-		first_name: "Jeremy",
-		last_name: "Johns",
-		age: 55,
-		home: "Norwich",
-		fav_colour: "black",
-	},
-	introduceMe: function (name) {
-		console.log(
-			`Please may I introduce ${this[name].first_name} ${this[name].last_name}, who is ${this[name].age} and lives in ${this[name].home}`
-		);
-	},
-};
+// const eveningClass = {
+// 	paisley: {
+// 		first_name: "Paisley",
+// 		last_name: "Simpson",
+// 		age: 23,
+// 		home: "Wramplingham",
+// 		fav_colour: "orange",
+// 	},
+// 	george: {
+// 		first_name: "George",
+// 		last_name: "Green",
+// 		age: 30,
+// 		home: "London",
+// 		fav_colour: "green",
+// 	},
+// 	carla: {
+// 		first_name: "Carla",
+// 		last_name: "Lyman",
+// 		age: 23,
+// 		home: "Lynchburg, Virginia",
+// 		fav_colour: "purple",
+// 	},
+// 	jane: {
+// 		first_name: "Jane",
+// 		last_name: "Grove",
+// 		age: 23,
+// 		home: "Liverpool",
+// 		fav_colour: "teal",
+// 	},
+// 	vee: {
+// 		first_name: "Priyatham",
+// 		last_name: "Varma",
+// 		age: 29,
+// 		home: "Norwich",
+// 		fav_colour: "blue",
+// 	},
+// 	jez: {
+// 		first_name: "Jeremy",
+// 		last_name: "Johns",
+// 		age: 55,
+// 		home: "Norwich",
+// 		fav_colour: "black",
+// 	},
+// 	introduceMe: function (name) {
+// 		console.log(
+// 			`Please may I introduce ${this[name].first_name} ${this[name].last_name}, who is ${this[name].age} and lives in ${this[name].home}`
+// 		);
+// 	},
+// };
 
-console.log(eveningClass.carla.home);
-console.log(eveningClass.jane.last_name);
+// console.log(eveningClass.carla.home);
+// console.log(eveningClass.jane.last_name);
 
-eveningClass.introduceMe("paisley");
-eveningClass.introduceMe("jane");
-eveningClass.introduceMe("george");
-eveningClass.introduceMe("carla");
-eveningClass.introduceMe("vee");
-eveningClass.introduceMe("jez");
+// eveningClass.introduceMe("paisley");
+// eveningClass.introduceMe("jane");
+// eveningClass.introduceMe("george");
+// eveningClass.introduceMe("carla");
+// eveningClass.introduceMe("vee");
+// eveningClass.introduceMe("jez");
 
-// refactored - it seems that with 'this' used in object method introduceMe, it then won't work when
-// called by forEach, at least as an arrow function
-var eveClassKeys = Object.keys(eveningClass);
+// // refactored - it seems that with 'this' used in object method introduceMe, it then won't work when
+// // called by forEach, at least as an arrow function
+// var eveClassKeys = Object.keys(eveningClass);
 
-eveClassKeys.forEach((key) =>
-	console.log(
-		`And now, please may I introduce ${eveningClass[key].first_name} ${eveningClass[key].last_name}, who is ${eveningClass[key].age} and lives in ${eveningClass[key].home}`
-	)
-);
+// eveClassKeys.forEach((key) =>
+// 	console.log(
+// 		`And now, please may I introduce ${eveningClass[key].first_name} ${eveningClass[key].last_name}, who is ${eveningClass[key].age} and lives in ${eveningClass[key].home}`
+// 	)
+// );
 
 // Task 1
 // var epicFailVideo = function (epicRating, hasAnimals) {
@@ -187,45 +187,45 @@ eveClassKeys.forEach((key) =>
 // // then divided by 10ml for units of alcohol
 // // then price divided by units of alcohol - this is sounding quite seedy but geeky
 
-// // create object
-// var UnitsOfAlcohol = function (name, capacity, alcByVolume, price) {
-// 	this.name = name;
-// 	this.capacity = capacity;
-// 	this.alcByVolume = alcByVolume;
-// 	this.price = price;
-// 	var tester = "Tester";
-// };
+// create object
+var UnitsOfAlcohol = function (name, capacity, alcByVolume, price) {
+	this.name = name;
+	this.capacity = capacity;
+	this.alcByVolume = alcByVolume;
+	this.price = price;
+	var tester = "Tester";
+};
 
-// UnitsOfAlcohol.prototype.pricePerUnit = function () {
-// 	var units = (this.capacity * this.alcByVolume) / 100 / 10;
-// 	var pricePerUnit = this.price / units;
-// 	return `${this.name} contains ${units.toFixed(
-// 		2
-// 	)} units of alcohol. If you buy a ${this.capacity} of ${
-// 		this.name
-// 	}, you pay £${pricePerUnit.toFixed(2)} per unit of alcohol`;
-// };
+UnitsOfAlcohol.prototype.pricePerUnit = function () {
+	var units = (this.capacity * this.alcByVolume) / 100 / 10;
+	var pricePerUnit = this.price / units;
+	return `${this.name} contains ${units.toFixed(
+		2
+	)} units of alcohol. If you buy a ${this.capacity} of ${
+		this.name
+	}, you pay £${pricePerUnit.toFixed(2)} per unit of alcohol`;
+};
 
-// var aldiPinot = new UnitsOfAlcohol("Aldi pinot grigio", 750, 11.5, 3.99);
-// var aldiPort = new UnitsOfAlcohol("Aldi port", 750, 19, 6.69);
-// var aldiCider = new UnitsOfAlcohol("Aldi taurus cider", 4 * 440, 5, 2.39);
-// var aldiGalahad = new UnitsOfAlcohol("Aldi galahad beer", 4 * 440, 4, 2.49);
-// var aldi1897 = new UnitsOfAlcohol("Aldi 1897 beer", 4 * 440, 5, 3.59);
-// var aldiStEtienne = new UnitsOfAlcohol("Aldi St Etienne", 4 * 440, 4.8, 3.19);
-// var aldiWhisky = new UnitsOfAlcohol(
-// 	"Aldi highland earl whisky",
-// 	700,
-// 	40,
-// 	11.49
-// );
+var aldiPinot = new UnitsOfAlcohol("Aldi pinot grigio", 750, 11.5, 3.99);
+var aldiPort = new UnitsOfAlcohol("Aldi port", 750, 19, 6.69);
+var aldiCider = new UnitsOfAlcohol("Aldi taurus cider", 4 * 440, 5, 2.39);
+var aldiGalahad = new UnitsOfAlcohol("Aldi galahad beer", 4 * 440, 4, 2.49);
+var aldi1897 = new UnitsOfAlcohol("Aldi 1897 beer", 4 * 440, 5, 3.59);
+var aldiStEtienne = new UnitsOfAlcohol("Aldi St Etienne", 4 * 440, 4.8, 3.19);
+var aldiWhisky = new UnitsOfAlcohol(
+	"Aldi highland earl whisky",
+	700,
+	40,
+	11.49
+);
 
-// console.log(aldiPinot.pricePerUnit());
-// console.log(aldiPort.pricePerUnit());
-// console.log(aldiCider.pricePerUnit());
-// console.log(aldiGalahad.pricePerUnit());
-// console.log(aldi1897.pricePerUnit());
-// console.log(aldiStEtienne.pricePerUnit());
-// console.log(aldiWhisky.pricePerUnit());
+console.log(aldiPinot.pricePerUnit());
+console.log(aldiPort.pricePerUnit());
+console.log(aldiCider.pricePerUnit());
+console.log(aldiGalahad.pricePerUnit());
+console.log(aldi1897.pricePerUnit());
+console.log(aldiStEtienne.pricePerUnit());
+console.log(aldiWhisky.pricePerUnit());
 
 // console.log(aldiPort.tester);
 

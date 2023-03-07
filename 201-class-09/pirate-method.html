@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+	</head>
+	<body>
+		<button onclick="pirateMethods()">Click to run</button>
+		<script>
+			var pirates = {};
+			pirates.weaponsArray = [
+				"cutlass",
+				"machete",
+				"pistol",
+				"brass knuckles",
+				"dagger",
+			];
+			function pirateMethods() {
+				var shipMate = prompt("What is your name, shipmate?");
+				pirates.shipMate = shipMate;
+
+				var randomNumber = Math.floor(
+					Math.random() * pirates.shipMate.length
+				);
+				var yourWeapon = pirates.weaponsArray[randomNumber];
+				alert(
+					"Welcome aboard, " +
+						pirates.shipMate +
+						". Your weapon will be the " +
+						yourWeapon
+				);
+				var index = pirates.weaponsArray.indexOf(yourWeapon);
+				pirates.weaponsArray.splice(index, 1);
+				console.log(pirates.weaponsArray);
+			}
+			// array = ["one", "two", "three"];
+			// const index = array.indexOf("two");
+			// if (index > -1) {
+			// 	// only splice array when item is found
+			// 	array.splice(index, 1); // 2nd parameter means remove one item only
+			// }
+
+			// array = [2, 9]
+			console.log(array.slice("two"));
+		</script>
+	</body>
+</html>
