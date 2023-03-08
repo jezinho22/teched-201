@@ -10,24 +10,25 @@ class Clown {
 		return "Parp, parp! Clown coming!";
 	}
 }
-let objClowns = {};
-let newClown = new Clown(
+let krusty = new Clown(
 	"Krusty the Clown",
 	"red",
 	"blue",
 	"The Simpsons",
 	"Huh huh huh huh!"
 );
-function addClown(name, object) {
-	let newObj = { name: newClown };
-	objClowns.push(newObj);
-}
-addClown(newClown.name, newClown);
+// let clownArray = [];
+// clownArray.push({ name: krusty.name, details: krusty });
+// console.log(clownArray[0].details);
+// function addClown(name, object) {
+// 	let newObj = { name: newClown };
+// 	clownArray.push(newObj);
+// }
+// addClown(newClown.name, newClown);
 // this also may work:   objClowns.push({name:newClown.name, details:newClown});
 // actually none of it works because you can't push to an object
 
-let newClown2 = new Clown("Mr Tumble", "red", "brown", "CBeebies", "silent");
-addClown(newClown2.name, newClown2);
+let tumble = new Clown("Mr Tumble", "red", "brown", "CBeebies", "silent");
 
 const ronald = new Clown(
 	"Ronald McDonald",
