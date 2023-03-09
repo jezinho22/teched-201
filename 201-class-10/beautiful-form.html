@@ -3,16 +3,7 @@
 <html>
 	<head>
 		<title>Forms</title>
-		<script>
-			function formSubmit() {
-				event.preventDefault();
-				console.log("hiya");
 
-				console.log(event.target.name.value);
-				console.log(event.target.password.value);
-				console.log(event.target.email.value);
-			}
-		</script>
 		<style>
 			body {
 				background-color: blue;
@@ -81,7 +72,7 @@
 	<body>
 		<h1>Form</h1>
 		<div id="container">
-			<form id="form" onsubmit="formSubmit()" class="sectionBorders">
+			<form id="form" class="sectionBorders">
 				<label for="password">Password:</label><br />
 				<input
 					type="password"
@@ -153,5 +144,6 @@
 		<br />
 		<p>Thank you for sharing your personal data with us.</p>
 		<p>You can always trust us to take very good care of it.</p>
+		<script src="form.js"></script>
 	</body>
 </html>
