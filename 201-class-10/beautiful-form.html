@@ -3,6 +3,16 @@
 <html>
 	<head>
 		<title>Forms</title>
+		<script>
+			function formSubmit() {
+				event.preventDefault();
+				console.log("hiya");
+
+				console.log(event.target.name.value);
+				console.log(event.target.password.value);
+				console.log(event.target.email.value);
+			}
+		</script>
 		<style>
 			body {
 				background-color: blue;
@@ -11,6 +21,9 @@
 			}
 			h1 {
 				color: azure;
+			}
+			.building {
+				border: 1px solid black;
 			}
 			input {
 				border: none;
@@ -32,16 +45,32 @@
 				text-align: center;
 				box-shadow: 2px 3px DARKBLUE;
 			}
-			form {
-				width: 300px;
+			#container {
+				display: flex;
+				flex-flow: row nowrap;
+				justify-content: space-around;
+			}
+			.mainSections {
+			}
+			#formResponse {
+				flex-grow: 2;
+				margin: 0 20px;
+			}
+			.sectionBorders {
 				background-color: blue;
 				border-radius: 16px;
 				border: 3px solid lightsteelblue;
-				padding: 10px;
+				padding: 5px;
 				color: azure;
 				font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
 					sans-serif;
-				box-shadow: 0 0 50px 15px #48abe0;
+				box-shadow: 0 0 5px 2px #48abe0;
+				text-shadow: lightblue 0 0 5px;
+			}
+			.subsection {
+				min-width: 100px;
+				min-height: 100px;
+				flex-grow: 1;
 			}
 			p {
 				color: azure;
@@ -50,31 +79,76 @@
 		</style>
 	</head>
 	<body>
-		<h1>Forms</h1>
-
-		<form>
-			<label for="password">Password:</label><br />
-			<input
-				type="password"
-				id="password"
-				placeholder="Enter your pwd"
-				required />
-			<br />
-			<label for="name">Name:</label><br />
-			<input
-				type="text"
-				id="name"
-				placeholder="Enter your name"
-				required /><br />
-			<label for="email">Email:</label><br />
-			<input
-				type="email"
-				id="email"
-				placeholder="Enter your email"
-				required /><br />
-
-			<input type="submit" value="Submit" />
-		</form>
+		<h1>Form</h1>
+		<div id="container">
+			<form id="form" onsubmit="formSubmit()" class="sectionBorders">
+				<label for="password">Password:</label><br />
+				<input
+					type="password"
+					id="password"
+					name="password"
+					placeholder="Enter your pwd"
+					required />
+				<br />
+				<label for="name">Name:</label><br />
+				<input
+					type="text"
+					id="name"
+					name="name"
+					placeholder="Enter your name"
+					required /><br />
+				<label for="email">Email:</label><br />
+				<input
+					type="email"
+					id="email"
+					name="email"
+					placeholder="Enter your email"
+					required /><br />
+				<div style="text-align: center">
+					<input type="submit" value="Submit" />
+				</div>
+			</form>
+			<div
+				id="formResponse"
+				class="sectionBorders"
+				style="
+					display: flex;
+					flex-flow: row nowrap;
+					justify-content: space-between;
+				">
+				<div
+					class="subsection_container"
+					style="
+						width: 32%;
+						display: flex;
+						flex-direction: column;
+						align-items: stretch;
+						justify-content: space-between;
+					">
+					<div class="subsection sectionBorders" style="margin: 0 0 5px 0">
+						This is top
+					</div>
+					<div class="subsection sectionBorders">This is bottom</div>
+				</div>
+				<div
+					class="subsection_2 sectionBorders"
+					style="min-height: 20%; min-width: 32%"></div>
+				<div
+					class="subsection_3"
+					style="
+						width: 32%;
+						display: flex;
+						flex-direction: column;
+						align-items: stretch;
+						justify-content: space-between;
+					">
+					<div
+						class="subsection sectionBorders"
+						style="flex-grow: 4; margin-bottom: 5px"></div>
+					<div class="subsection sectionBorders"></div>
+				</div>
+			</div>
+		</div>
 		<br />
 		<br />
 		<p>Thank you for sharing your personal data with us.</p>
