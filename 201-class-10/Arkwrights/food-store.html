@@ -4,55 +4,144 @@
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Averia+Serif+Libre&display=swap"
+			rel="stylesheet" />
 		<title>Arkwright Groceries and Provisions</title>
 		<style>
-			.building {
-				border: 1px solid black;
+			:root {
+				--main-bg-color: #9e383d;
+				--jasper: #db504aff;
+				--jade: #04a777ff;
+				--vanilla: #fff4b3;
+				--vanilla-dark-one: #ffed80;
+				--rich-black: #040f0fff;
+				--charcoal: #40434eff;
 			}
-			.container {
+			body {
+				background-color: var(--jasper);
+				font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+					sans-serif;
+			}
+			h1 {
+				border: 10px solid var(--rich-black);
+				background-color: var(--vanilla);
+				padding: 20px;
+				text-align: center;
+				font-family: "Averia serif libre", serif;
+
 				display: flex;
-				flex-flow: row nowrap;
+				justify-content: center;
+				align-items: center;
+			}
+
+			#container {
+				display: flex;
+				flex-flow: row;
+				justify-content: center;
 			}
 			form {
 				width: 300px;
 			}
+			form,
+			#main {
+				padding: 5px;
+				border: 5px solid var(--rich-black);
+				background-color: var(--vanilla);
+				color: var(--rich-black);
+				display: flex;
+				flex-flow: column;
+				margin: 0 20px;
+			}
+			.input {
+				width: 80%;
+				margin: 5px 5px 20px 5px;
+				padding: 0.5em;
+				border: 2px solid var(--rich-black);
+				border-radius: 2px;
+			}
+			input[type="submit"] {
+				width: 70px;
+				align-self: center;
+				margin: 0 0 15px 0;
+				padding: 0.5em;
+				background-color: var(--vanilla-dark-one);
+				border: 2px solid var(--rich-black);
+				border-radius: 5px;
+			}
+			#main {
+				min-width: 400px;
+			}
 			table {
-				min-width: 300px;
+				min-width: 400px;
+				border-radius: 5px;
 			}
 			th {
-				border: 1px solid black;
+				background-color: var(--charcoal);
+				color: whitesmoke;
+				border-radius: 3px;
+			}
+			td {
+				background-color: var(--vanilla-dark-one);
+				text-overflow: ellipsis;
+			}
+			th,
+			td {
+				border: 2px solid var(--rich-black);
 			}
 		</style>
 	</head>
 	<body>
 		<h1>
-			Groceries&nbsp;&nbsp;&nbsp;<span>ARKWRIGHT</span>&nbsp;&nbsp;&nbsp;Provisions
+			<span>Groceries</span
+			><span
+				style="
+					font-size: 1.8em;
+					color: var(--main-bg-color);
+					text-shadow: 2px 2px var(--charcoal);
+				"
+				>&nbsp;&nbsp;&nbsp;ARKWRIGHT&nbsp;&nbsp;&nbsp;</span
+			><span>Provisions</span>
 		</h1>
+
 		<div id="container">
-			<form id="form" class="building">
+			<form id="form">
+				<label for="cuisine">Cuisine:</label>
 				<select
-					class="building"
+					class="input"
 					name="cuisine"
 					id="cuisine"
 					placeholder="Select cuisine">
-					<option value="chinese">Chinese</option>
-					<option value="indian">Indian</option>
-					<option value="middle_east">Middle Eastern</option>
-					<option value="mexican">Mexican</option>
-					<option value="other">Other</option>
+					<option value="Chinese">Chinese</option>
+					<option value="Indian">Indian</option>
+					<option value="Middle Eastern">Middle Eastern</option>
+					<option value="Mexican">Mexican</option>
+					<option value="West Indian">West Indian</option>
+					<option value="Other">Other</option>
 				</select>
-				<input class="building" name="dish" id="dish" type="text" />
-				<input class="building" name="weight" id="weight" type="number" />
-				<input class="building" type="submit" value="Submit" />
+				<label for="foodItem">Item:</label>
+				<input class="input" name="foodItem" id="foodItem" type="text" />
+				<label for="weight">Size in grammes:</label>
+				<input class="input" name="weight" id="weight" type="number" />
+				<input type="submit" value="Submit" />
 			</form>
-			<div class="building" style="width: 300px">
-				<table class="building">
+
+			<div id="main" style="width: 300px">
+				<table>
 					<thead>
-						<th>Cuisine</th>
-						<th>Dish</th>
-						<th>Weight</th>
+						<th style="width: 30%">Cuisine</th>
+						<th style="width: 50%">Item</th>
+						<th style="width: 20%">Size</th>
 					</thead>
-					<tbody></tbody>
+					<tbody>
+						<tr>
+							<td>Test</td>
+							<td>Test</td>
+							<td>Test</td>
+						</tr>
+					</tbody>
 				</table>
 			</div>
 		</div>
