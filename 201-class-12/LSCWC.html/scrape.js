@@ -20,21 +20,14 @@
 // 	}
 // }
 
-let v = Array.from(document.querySelectorAll("code"));
-v.unshift("/*");
-let w = v.reduce((whole, item) => {
-	return whole + item.outerHTML;
-});
+// let v = Array.from(document.querySelectorAll("code"));
+// v.unshift("/*");
+// let w = v.reduce((whole, item) => {
+// 	return whole + item.outerHTML;
+// });
 
-//console.table(w);
-document.body.innerHTML = w + "*/";
+// document.body.innerHTML = w + "*/";
 
-// let obj = {};
-
-// let d = ["one", "two", "three"];
-
-// obj[d[0]] = { explanation: d[1], misspellings: d[2] };
-// console.table(obj);
-
-// <p id="myText">Hello World</p>
-// <button class="btn" onclick="copyContent()">Copy!</button>
+let code = document.querySelector("code").innerHTML;
+console.log(code);
+console.log("Hi");
