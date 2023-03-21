@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<style>
+			body {
+				background-color: black;
+			}
+			.nx {
+				color: red; /*variables , console.log, */
+			}
+			.s2,
+			.dl {
+				color: lime; /* strings and speech marks */
+			}
+			.p {
+				color: palegoldenrod; /* full stops, commas and semi-colons */
+			}
+			.c1 {
+				color: grey; /* comments */
+			}
+			.o {
+				color: yellow; /* operators */
+			}
+			.mi,
+			.mf {
+				color: orange; /* numbers */
+			}
+			.kd,
+			.kc {
+				color: skyblue; /* key words */
+			}
+		</style>
+	</head>
+	<body>
+		<pre class="highlight javascript">
+            <code><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="dl">"</span><span class="s2">Hi there!</span><span class="dl">"</span><span class="p">);</span>
+            <span class="c1">// Prints: Hi there!</span>
+            </code>
+        </pre>
+		<pre
+			class="highlight javascript"><code><span class="kd">const</span> <span class="nx">items</span> <span class="o">=</span> <span class="p">[</span><span class="dl">"</span><span class="s2">apricot</span><span class="dl">"</span><span class="p">,</span> <span class="dl">"</span><span class="s2">banana</span><span class="dl">"</span><span class="p">,</span> <span class="dl">"</span><span class="s2">cherry</span><span class="dl">"</span><span class="p">];</span>
+
+            <span class="k">for</span> <span class="p">(</span><span class="kd">let</span> <span class="nx">i</span> <span class="o">=</span> <span class="nx">items</span><span class="p">.</span><span class="nx">length</span> <span class="o">-</span> <span class="mi">1</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&gt;=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">i</span> <span class="o">-=</span> <span class="mi">1</span><span class="p">)</span> <span class="p">{</span>
+              <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">`</span><span class="p">${</span><span class="nx">i</span><span class="p">}</span><span class="s2">. </span><span class="p">${</span><span class="nx">items</span><span class="p">[</span><span class="nx">i</span><span class="p">]}</span><span class="s2">`</span><span class="p">);</span>
+            <span class="p">}</span>
+            
+            <span class="c1">// Prints: 2. cherry</span>
+            <span class="c1">// Prints: 1. banana</span>
+            <span class="c1">// Prints: 0. apricot</span>
+            </code></pre>
+	</body>
+</html>

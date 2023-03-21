@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+	</head>
+	<body>
+		<form id="myForm">
+			<input type="file" name="csvFile" id="csvFile" accept=".csv" />
+			<br />
+			<input type="submit" value="Submit" />
+		</form>
+		<script>
+			const csvFile = document.getElementById("csvFile");
+			const myForm = document.getElementById("myForm");
+
+			myForm.addEventListener("submit", function (event) {
+				// prevent page reloading
+				event.preventDefault();
+				// bring identified file's contents into variable
+				// it's always an array and can have multiple files
+				const files = event.target.csvFile.files;
+				const firstFile = files[0];
+
+				// create new instance of filereader
+				const fileReader = new FileReader();
+				// create a handler for the event that will follow it
+				// which is the reading of a file by fileReader
+				fileReader.onload = function (event) {
+					let fileContent = event.target.result; //or fileReader.result
+					document.write(fileContent);
+				};
+				fileReader.readAsText(firstFile);
+			});
+		</script>
+	</body>
+</html>
