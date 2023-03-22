@@ -5,17 +5,18 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>Document</title>
+		<style rel="stylesheet" href="code-colour.css"></style>
 	</head>
 	<body>
 		<form id="myForm">
-			<input type="file" name="csvFile" id="csvFile" accept=".csv" />
+			<input type="file" name="csvFile" id="csvFile" accept="text" />
 			<br />
 			<input type="submit" value="Submit" />
 		</form>
 		<script>
 			const csvFile = document.getElementById("csvFile");
 			const myForm = document.getElementById("myForm");
-
+			let fileArray = [];
 			myForm.addEventListener("submit", function (event) {
 				// prevent page reloading
 				event.preventDefault();
@@ -30,7 +31,9 @@
 				// which is the reading of a file by fileReader
 				fileReader.onload = function (event) {
 					let fileContent = event.target.result; //or fileReader.result
-					document.write(fileContent);
+					fileArray = fileContent.split("\n");
+					console.table(fileArray);
+					console.log("Done");
 				};
 				fileReader.readAsText(firstFile);
 			});
