@@ -792,7 +792,7 @@ function displayItem(object) {
 function addToBody(codeToAdd) {
 	document.body.innerHTML += codeToAdd;
 }
-let b = keyArray[67];
+let b = "Functions Assigned to Variables";
 // console.log(b);
 let c = displayItem(findFromTitles(b));
 addToBody(c);
