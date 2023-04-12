@@ -4,13 +4,17 @@
 
 Explain how the ability to use video and audio on the web has evolved since the
 early 2000s.  
-<span style="color:orange"></span>  
+<span style="color:orange">It used to require dedicated packages but now there
+are html elements</span>  
 Describe the use of the src and controls attributes in the <video> element.  
-<span style="color:orange"></span>  
+<span style="color:orange">src gives the file location, controls provides a
+minimum range of controls for playing video eg play, stop and volume</span>  
 Why is it important to have fallback content inside the <video> element?  
-<span style="color:orange"></span>  
+<span style="color:orange">Not all videos are supported by all browsers, so you
+need to allow users to download the video and watch it on their own media
+player</span>  
 Write a very short story where <audio> and <video> are characters.  
-<span style="color:orange"></span>
+<span style="color:orange">Er, no</span>
 
 ## [A Complete Guide To Grid](https://css-tricks.com/snippets/css/complete-guide-grid/)
 
