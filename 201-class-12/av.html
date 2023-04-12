@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+	</head>
+	<body>
+		<header>
+			<h1>Audio visual elements</h1>
+		</header>
+		<main>
+			<h2>Audio</h2>
+			<audio id="blackGrape" src="rev-black-grape.mp3" controls></audio>
+			<h3>attributes</h3>
+			<li>autoplay: boolean - not considered to be user friendly</li>
+			<li>controls: play, mute, volume, download</li>
+			<li>loop</li>
+			<li>muted</li>
+			<li>src: link to file - allows download too</li>
+			<li>
+				volume<: range 0.0 - 1.0/li>
+				<button id="randVol">Random volume</button>
+			</li>
+
+			<h2>Video</h2>
+			<video
+				src="VID_20160823_193213955.mp4"
+				width="50%"
+				controls
+				muted></video>
+			<ul>
+				<li>autoplay</li>
+				<li>controls</li>
+				<li>height: not %</li>
+				<li>muted</li>
+				<li>
+					posted: use a placeholder still or splash instead of first frame of
+					video
+				</li>
+				<li>src: file location & allows download</li>
+				<li>volume: 0.0 - 1.0</li>
+				<li>width: can be % - maybe change in</li>
+			</ul>
+		</main>
+
+		<script>
+			const blackGrape = document.getElementById("blackGrape");
+			const volButton = document.getElementById("randVol");
+			volButton.addEventListener("click", function () {
+				blackGrape.volume = Math.random();
+				console.log(blackGrape.volume);
+			});
+		</script>
+	</body>
+</html>
