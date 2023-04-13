@@ -6,6 +6,8 @@ let resultButton = document.querySelector("section + div");
 let image1 = document.querySelector("section img:first-child");
 let image2 = document.querySelector("section img:nth-child(2)");
 
+console.log(image1);
+
 let clicks = 0;
 let maxClicksAllowed = 9;
 
@@ -75,13 +77,13 @@ function renderChart() {
 // 		ul.appendChild(li);
 // 	}
 // }
-let cruising = new Goat("Cruising Goat", "cruisin-goat");
-let float = new Goat("Float Your Goat", "float-your-goat");
-let hand = new Goat("Goat out of Hand", "goat-out-of-hand");
-let kissing = new Goat("Kissing Goat", "kissing-goat");
-let sassy = new Goat("Sassy Goat", "sassy-goat");
-let smiling = new Goat("Smiling Goat", "smiling-goat");
-let sweater = new Goat("Sweater Goat", "sweater-goat");
+let cruising = new Goat("Cruising Goat", "cruisin-goat.jpg");
+let float = new Goat("Float Your Goat", "float-your-goat.jpg");
+let hand = new Goat("Goat out of Hand", "goat-out-of-hand.jpg");
+let kissing = new Goat("Kissing Goat", "kissing-goat.jpg");
+let sassy = new Goat("Sassy Goat", "sassy-goat.jpg");
+let smiling = new Goat("Smiling Goat", "smiling-goat.jpg");
+let sweater = new Goat("Sweater Goat", "sweater-goat.jpg");
 
 state.allGoatsArray.push(
 	cruising,
@@ -92,7 +94,7 @@ state.allGoatsArray.push(
 	smiling,
 	sweater
 );
-
+console.log(state.allGoatsArray);
 // random number to help pick random goats
 function getRandomNumber() {
 	return Math.floor(Math.random() * state.allGoatsArray.length);
@@ -109,6 +111,8 @@ function renderGoats() {
 	}
 	image1.src = state.allGoatsArray[goat1].src;
 	image2.src = state.allGoatsArray[goat2].src;
+	image1.style.zIndex = 5;
+	image2.style.zIndex = 5;
 
 	image1.alt = state.allGoatsArray[goat1].name;
 	image2.alt = state.allGoatsArray[goat2].name;
@@ -134,7 +138,7 @@ function handleGoatClick(event) {
 	}
 	if (clicks === maxClicksAllowed) {
 		goatContainer.removeEventListener("click", handleGoatClick);
-		resultButton.addEventListener("click", renderResults);
+		resultButton.addEventListener("click", renderChart);
 		// resultButton.className = 'clicks-allowed';
 		goatContainer.className = "no-voting";
 	} else {

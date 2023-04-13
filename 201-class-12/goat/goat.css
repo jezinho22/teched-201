@@ -16,15 +16,13 @@ main {
 }
 
 #siteLogo {
-	width: 250px;
+	width: 175px;
 	z-index: 2;
 	grid-row-start: 1;
-	grid-row-end: 3;
+	grid-row-end: 1;
 	grid-column-start: 1;
-	grid-column-end: 3;
-}
-img {
-	width: 50%;
+	grid-column-end: 1;
+	justify-self: end;
 }
 
 h1 {
@@ -33,9 +31,11 @@ h1 {
 	line-height: 0.8;
 	margin: 3rem 0 1rem;
 	grid-row-start: 1;
-	grid-row-end: 3;
+	grid-row-end: 1;
 	grid-column-start: 2;
-	grid-column-end: 3;
+	grid-column-end: 2;
+	align-self: center;
+	z-index: 2;
 }
 
 section {
@@ -52,7 +52,7 @@ section {
 }
 
 section img {
-	width: 460px;
+	width: 200px;
 	max-height: 26rem;
 	/* border so that adding hover border does not move other elements*/
 	border: 5px solid transparent;
