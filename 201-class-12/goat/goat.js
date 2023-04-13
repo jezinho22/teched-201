@@ -18,8 +18,63 @@ function Goat(name, src) {
 	this.src = src;
 	this.views = 0;
 	this.clicks = 0;
+	console.log(this.name + " created");
 }
 
+function renderChart() {
+	const goatArray = [];
+	const clicksArray = [];
+	const viewsArray = [];
+
+	for (let i = 0; i < state.allGoatsArray.length; i++) {
+		let goat = state.allGoatsArray[i];
+		goatArray.push(goat.name);
+		clicksArray.push(goat.clicks);
+		viewsArray.push(goat.views);
+	}
+
+	// const labels = Utils.months({count: 7});
+	const data = {
+		labels: goatArray,
+		datasets: [
+			{
+				label: "Times shown",
+				data: viewsArray,
+				backgroundColor: ["teal"],
+				borderColor: ["tomato"],
+				borderWidth: 1,
+			},
+			{
+				label: "Times clicked",
+				data: clicksArray,
+				backgroundColor: ["tomato"],
+				borderColor: ["teal"],
+				borderWidth: 1,
+			},
+		],
+	};
+	const config = {
+		type: "bar",
+		data: data,
+		options: {
+			scales: {
+				y: {
+					beginAtZero: true,
+				},
+			},
+		},
+	};
+	const canvasChart = document.getElementById("myChart");
+	new Chart(canvasChart, config);
+}
+// function renderResults() {
+// 	let ul = document.querySelector("ul");
+// 	for (let i = 0; i < state.allGoatsArray.length; i++) {
+// 		let li = document.createElement("li");
+// 		li.textContent = `${state.allGoatsArray[i].name} had views: ${state.allGoatsArray[i].views} and clicks: ${state.allGoatsArray[i].clicks}.`;
+// 		ul.appendChild(li);
+// 	}
+// }
 let cruising = new Goat("Cruising Goat", "cruisin-goat");
 let float = new Goat("Float Your Goat", "float-your-goat");
 let hand = new Goat("Goat out of Hand", "goat-out-of-hand");
@@ -76,6 +131,14 @@ function handleGoatClick(event) {
 			state.allGoatsArray[i].clicks++;
 			break;
 		}
+	}
+	if (clicks === maxClicksAllowed) {
+		goatContainer.removeEventListener("click", handleGoatClick);
+		resultButton.addEventListener("click", renderResults);
+		// resultButton.className = 'clicks-allowed';
+		goatContainer.className = "no-voting";
+	} else {
+		renderGoats();
 	}
 }
 
