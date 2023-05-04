@@ -20,17 +20,18 @@ will achieve objectives == how we (they and I) will know they have</span>
 4.
 5.
 
-<span style="font-size: 16px;color: #1F51FF;">Key language [best
-practice]</span>  
-<span style="font-size: 10px; color: #1F51FF;">Terms I will use, terms I want
+<span style="font-size: 16px;color: #83EEFF;">Key language [<span
+style="font-size: 16px;color: #FF3131;">gold level practice</span> ]</span>  
+<span style="font-size: 10px; color: #83EEFF;">Terms I will use, terms I want
 learners to use</span>
 
 -
 -
 
-<span style="font-size: 16px;color: #1F51FF;">Possibly vulnerable learners [best
-practice]</span>  
-<span style="font-size: 10px;color: #1F51FF;">Learners with difficulties (eg
+<span style="font-size: 16px;color: #83EEFF;">Possibly vulnerable learners
+[<span style="font-size: 16px;color: #FF3131;">gold level
+practice</span>]</span>  
+<span style="font-size: 10px;color: #83EEFF;">Learners with difficulties (eg
 neuro, EAL, emotion/well-being), learners not on track to pass, learners absent
 recently: Learner initials + intended action</span>
 
